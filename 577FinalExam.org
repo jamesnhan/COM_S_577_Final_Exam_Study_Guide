@@ -1,0 +1,559 @@
+#+LaTeX_CLASS: article
+
+#+TITLE: COM S 577 - Final Exam Study Guide
+#+AUTHOR: Yan-Bin Jia
+
+#+DATE: <2016-12-13 Tue 12:00>
+
+* Plane Curves
+  Curves are differentiable functions. We denote them $\boldsymbol{\alpha} : \left[a,b\right] \rightarrow \mathbb{R}^{2} \left(\text{or } \mathbb{R}^{3}\right)$.
+
+  A curve $\boldsymbol{\alpha}\left( t \right) = \left( x\left( t \right), y\left( t \right) \right)$ is said to be *smooth* at $t = t_{0}$ if its $k\text{th}$ derivative exists for any integer $k > 0$.
+
+  \begin{align*}
+      \boldsymbol{\alpha}^{\left( k \right)}\left( t \right) = \left( x^{\left( k \right)}\left( t \right), y^{\left( k \right)} \left( t \right) \right)
+  \end{align*}
+
+  A curve is *piecewise smooth* if it has a domain which is the union of a finite number of subintervals of each of which the curve is smooth. A polygon is piecewise smooth for each of its sides.
+
+  A curve is a *closed parametric curve* if $\boldsymbol{\alpha}\left( a \right) = \boldsymbol{\alpha}\left( b \right)$. A point of /self-crossing/ is a point $\boldsymbol{\alpha}\left( t_{1} \right)$ for which there exists finitely many distinct values $t_{1}, \ldots, t_{n} \in \left[a,b\right]$ for $n \geq 2$ which satisfy $\boldsymbol{\alpha}\left( t_{1} \right) = \ldots = \boldsymbol{\alpha}\left( t_{n} \right)$ and in the case $n = 2$, $\left[t_{1},t_{2}\right] \neq \left[a,b\right]$. For example, a circle is closed, but does not have self-crossings. A figure eight is closed and self-crossing.
+  
+** Velocity, Speed, and Arc Length
+   For a curve $\boldsymbol{\alpha}\left( t \right)$, the *velocity vector* at $t$ is $\boldsymbol{\alpha}'\left( t \right)$. The *speed* at $t$ is the length $\lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert$. This is clear if we see the curve as a particle moving on a path. The parametrization $\boldsymbol{\alpha}\left( t \right)$ is *unit-speed* if the $\lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert = 1$ for all values of $t$. When the speed vanishes, the curve has a *cusp*. A curve is *regular* if the velocity vectors are non-zero for all $t$. The *arc length* is defined by:
+
+   \begin{align*}
+       \int_{a}^{b} \lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert dt
+   \end{align*}
+
+** Unit-Speed Reparametrization
+   A regular curve $\boldsymbol{\alpha}$ has a reparametrization $\tilde{\boldsymbol{\alpha}}$. Not all unit-speed reparametrizations have an explicit form, but we can use their existence for many computations on curves.
+
+** Tangent $\left( T \right)$ and Normal $\left( N \right)$
+   If we have a curve $\boldsymbol{\alpha}$, then at a regular point on the curve, there exists a non-zero *tangent vector* $\boldsymbol{\alpha}'\left( t \right) = \left(x'\left( t \right), y'\left( t \right)\right)$. It represents the velocity of the curve at the point. The normal vector is $\left(-y'\left( t \right), x'\left( t \right)\right)$. This is a rotation of the tangent vector counterclockwise by $\frac{\pi}{2}$. If the curve was unit-speed, then the tangent and normal are unit vectors.
+
+   The cross product is non-zero. In the case of unit-speed curves, $T \times N = 1$.
+
+** Curvature $\left( \kappa \right)$
+   The *curvature* of a curve is defined as:
+
+   \begin{align*}
+       \kappa = \frac{d\phi}{ds}
+   \end{align*}
+
+   where $\phi$ is the angle from the $x\text{-axis}$ to the tangent and $s$ is the arc length. The *absolute curvature* is $\lvert \kappa \lvert$.
+
+   Since $T \cdot T = 1$ and differentiating this equation yields $T' \cdot T = 0$, we see that the change of $T\left( s \right)$ is orthogonal to the tangential direction, so it must be in the normal direction. The curvature is defined as the turning of the tangent along the direction of the unit normal. So,
+
+   \begin{align*}
+       T' = \frac{dT}{ds} = \kappa N
+   \end{align*}
+
+** Center of Curvature, Osculating Circle, Radius of Curvature, and Total Curvature
+   When the curvature is positive then the *center of curvature* lies along the direction of the normal $N\left( s \right)$ at a distance $\frac{1}{\kappa}$ from the point $\boldsymbol{\alpha}\left( s \right)$. When the curvature is negative, then the center of curvature lies in the direction of $-N\left( s \right)$ at a distance of $-\frac{1}{\kappa}$. The *radius of curvature* is $\frac{1}{\lvert \kappa \lvert}$. Together, these form the *osculating circle*. This circle approximates the curve locally up to the second order. The *total curvature* over a closed interval $\left[a,b\right]$ measures the rotation of the tangent as $s$ changes from $a$ to $b$.
+
+   \begin{align*}
+       \Phi\left(a,b\right) &= \int_{a}^{b} \kappa ds \\
+       &= \int_{a}^{b} \frac{d\phi}{ds}ds \\
+       &= \int_{a}^{b} d\phi \\
+       &= \phi\left(b\right) - \phi\left(a\right)
+   \end{align*}
+
+** Inflection and Vertex
+   A point $s$ on the curve $\boldsymbol{\alpha}$ is a *simple inflection*, or an *inflection*, if $\kappa\left( s \right) = 0$, but $\kappa'\left( s \right) \neq 0$. Intuitively, this is a point where the curve moves from one side of the tangent to the other or, for simple closed curves, when the curve switches from convex to concave or vice versa.
+
+   A point where the curvature and first $j-1$ order derivatives are zero but the $j\text{th}$ derivative is non-zero is called an *inflection point of order $j$*. A second order inflection point is also called a point of *simple undulation* which will maintain concavity or convexity in the neighborhood on a simple closed curve.
+
+   A *simple vertex*, or simply *vertex*, is a local minimum or maximum when $\kappa' = 0$ but $\kappa'' \neq 0$.
+
+** Arbitrary Speed Curves
+   If $\boldsymbol{\alpha}$ is not necessarily unit-speed, then we obtain the tangent:
+
+   \begin{align*}
+       T = \frac{\boldsymbol{\alpha}'}{\lvert \lvert \boldsymbol{\alpha}' \lvert \lvert}
+   \end{align*}
+
+   If we let $v = \frac{\boldsymbol{\alpha}'}{\lvert \lvert \boldsymbol{\alpha}' \lvert \lvert}$, then we have that:
+
+   \begin{align*}
+       T' = \kappa v N
+   \end{align*}
+
+   Intuitively we are simply normalizing the vectors by the speed. We also note that:
+
+   \begin{align*}
+       \kappa = \frac{\boldsymbol{\alpha}' \times \boldsymbol{\alpha}''}{\lvert \lvert \boldsymbol{\alpha}' \lvert \lvert^{3}}
+   \end{align*}
+
+   We also find that *total curvature* is:
+
+   \begin{align*}
+       \Phi\left(a,b\right) = \int_{a}^{b} \kappa\left(t\right)\lvert\lvert\boldsymbol{\alpha}'\left(t\right)\lvert\lvert dt
+   \end{align*}
+   
+** Simple Closed Curves
+   We can say a *simple closed curve* is one that joins up the beginning and end.
+
+   \begin{center}
+       \begin{tabular}{ c c c }
+           $\boldsymbol{\alpha}\left(t\right) = \boldsymbol{\alpha}\left(u\right)$ & if and only if & $t - u = ka$ for some integer $k$
+       \end{tabular}
+   \end{center}
+   
+   The *area* is defined as:
+
+   \begin{align*}
+       A\left(a\right) &= \int \int_{int\left(\boldsymbol{\alpha}\right)} dxdy \\
+       &= \frac{1}{2} \int_{0}^{a} \left(xy' - yx'\right)dt
+   \end{align*}
+
+   Then, we find that if we have a simple closed curve with length $l$ and area $A$,
+
+   \begin{align*}
+       A \leq \frac{1}{4\pi}l^{2}
+   \end{align*}
+   
+* Space Curves
+  A plane curve is determined by curvature. Space curves are not. A circle on the $xy-\text{plane}$ and a circular helix have unit curvature everywhere, but can not be transformed to one another. Instead, we measure space curves with curvature and torsion.
+
+  If we have a unit-speed space curve $\gamma\left(s\right)$ in $\mathbb{R}^{3}$, we can denote the unit tangent vector as $T = \gamma'\left(s\right)$. We have the real-valued *curvature function* $kappa\left(s\right) = \lvert\lvert T'\left(s\right) \lvert\lvert \geq 0$.
+
+** Principal Normal
+   The principal normal of a space curve $\gamma\left( s \right)$ is the vector:
+   
+   \begin{align*}
+       N\left( s \right) = \frac{1}{\kappa\left(s\right)}T'\left(s\right)
+   \end{align*}
+
+   Since $\lvert\lvert T'\left(s\right) \lvert\lvert = \kappa$, $N$ is a unit vector. Similarly, $T' \cdot T = 0$ so T and N are orthogonal to each other.
+
+** Binormal
+   The *binormal* is:
+   
+   \begin{align*}
+       B = T \times N
+   \end{align*}
+
+   Then, $\left\lbrace T\left(s\right), N\left(s\right), B\left(s\right) \right\rbrace$ form an *orthonormal basis* of $\mathbb{R}^{3}$ where each is orthogonal to the other two. They form the *Frenet frame*.
+
+** Torsion $\left( \tau \right)$
+   We define the *torsion* as:
+
+   \begin{align*}
+       B' = -\tau N
+   \end{align*}
+
+   We can see that:
+
+   \begin{align*}
+       \frac{d\theta}{ds} B'\left(s\right) \cdot N\left(s\right) = -\tau
+   \end{align*}
+
+   $-\tau$ represents the rate of binormal rotation.
+
+** Frenet Formulas
+   Given a unit-speed curve with positive curvature and some torsion,
+
+   \begin{center}
+       \begin{tabular}{ c c c c c }
+           $T'$ & $=$ & & $\kappa N$ & \\
+           $N'$ & $=$ & $-\kappa T$ & & $+\tau B$ \\
+           $B'$ & $=$ & & $-\tau N$ &
+       \end{tabular}
+   \end{center}
+
+   Remember the matrix:
+
+   \begin{align*}
+       \begin{pmatrix}
+           0 & \kappa & 0 \\
+           -\kappa & 0 & \tau \\
+           0 & -\tau & 0
+       \end{pmatrix}
+   \end{align*}
+
+   If we multiply by the column vector $\left( T, N, B \right)^{T}$, then we can get the Frenet formulas.
+
+   The *Frenet frame* consists of the *curvature function*, the *torsion function*, the *unit tangent*, the *principal normal*, and the *binormal*. In cases of arbitrary-speed curves, we define:
+
+   \begin{align*}
+       \kappa &= \tilde{\kappa}\left(s\right)
+       \tau &= \tilde{\tau}\left(s\right)
+       T &= \tilde{T}\left(s\right)
+       N &= \tilde{N}\left(s\right)
+       B &= \tilde{B}\left(s\right)
+   \end{align*}
+
+   This is true because the Frenet frame is *independent* of the parametrization. For example for $s$ being an arc-length function of the curve, $\boldsymbol{\alpha}\left(t\right) = \boldsymbol{\alpha}\left(s\left(t\right)\right)$. Only the *derivatives are affected by parametrization* where we simply use the speed $v$ of the curve to correct the values of $T'$, $N'$, and $B'$.
+
+   \begin{center}
+       \begin{tabular}{ c c c c c }
+           $T'$ & $=$ & & $\kappa vN$ & \\
+           $N'$ & $=$ & $-\kappa vT$ & & $+\tau vB$ \\
+           $B'$ & $=$ & & $-\tau vN$ &
+       \end{tabular}
+   \end{center}
+
+   Intuitively, a unit-speed curve has speed $v=1$, so the Frenet formulas are as defined earlier.
+
+*** Computing the Frenet Apparatus
+    *Theorem 3* /Let $\boldsymbol{\alpha}$ be a regular curve in $\mathbb{R}^{3}$, and $\boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \neq 0$. Then,/
+
+    \begin{align*}
+    T &= \frac{\boldsymbol{\alpha}'}{\lvert\lvert \boldsymbol{\alpha}' \lvert\lvert} \\
+    B &= \frac{\boldsymbol{\alpha}' \times \boldsymbol{\alpha}''}{\lvert\lvert \boldsymbol{\alpha}' \times \boldsymbol{\alpha}''\lvert\lvert} \\
+    N &= B \times T \\
+    \kappa &= \frac{\lvert\lvert \boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \lvert\lvert}{\lvert\lvert \boldsymbol{\alpha}' \lvert\lvert^{3}} \\
+    \tau &= \frac{\left(\boldsymbol{\alpha}' \times \boldsymbol{\alpha}''\right) \cdot \boldsymbol{\alpha}'''}{\lvert\lvert \boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \lvert\lvert^{2}}
+    \end{align*}
+
+** Approximation
+   Consider the unit-speed curve $\boldsymbol{\beta} = \left( \beta_{1}, \beta_{2}, \beta_{3} \right)$ near the point $\boldsymbol{\beta}\left(0\right)$. For a small $s$, each coordinate $\beta_{i}\left(s\right)$ is closely approximated by the Taylor series. So,
+
+   \begin{align*}
+       \boldsymbol{\beta}\left(s\right) \approx \boldsymbol{\beta}\left(0\right) + s\boldsymbol{\beta}'\left(0\right) + \frac{s^{2}}{2}\boldsymbol{\beta}''\left(0\right) + \frac{s^{3}}{6}\boldsymbol{\beta}'''\left(0\right)
+   \end{align*}
+
+   However, we know the first and second derivative of $\boldsymbol{\beta}$ at $s = 0$ are:
+
+   \begin{align*}
+       \boldsymbol{\beta}'\left(0\right) = T_{0} \\
+       \boldsymbol{\beta}''\left(0\right) = \kappa_{0}N_{0}
+   \end{align*}
+
+   Where subscript is evaluation at $s = 0$. Then, the third derivative is defined as:
+
+   \begin{align*}
+       \boldsymbol{\beta}'''\left(0\right) = -\kappa_{0}^{2}T_{0} + \frac{d\kappa}{ds}\left(0\right)N_{0} + \kappa_{0}\tau_{0}B_{0}
+   \end{align*}
+
+   So, the approximation becomes:
+
+   \begin{align*}
+       \boldsymbol{\beta}\left(s\right) \approx \boldsymbol{\beta}\left(0\right) + sT_{0} + \kappa_{0}\frac{s^{2}}{2}N_{0} + \kappa_{0}\tau_{0}\frac{s^{3}}{6}B_{0}
+   \end{align*}
+
+   This is the *Frenet approximation of $\boldsymbol{\beta}$ near $s = 0$*. We can get an approximation at some $s_{0}$ by replacing $0$ with $s_{0}$ and $s$ with $s - s_{0}$.
+
+** Osculating Plane
+   Using the *Frenet approximation*, we can get the best linear or quadratic approximation of the curve. This approximation lies in the plane through the approximated point orthogonal to the binormal. This is called the *osculating plane of $\boldsymbol{\beta}$ near $s_{0}$*.
+
+** Spherical Image
+   Given a unit-speed curve $\boldsymbol{\beta}$, then the curve $\boldsymbol{\sigma}\left(s\right) = T\left(s\right) = \boldsymbol{\beta}'\left(s\right)$ is called the *spherical image* of $\boldsymbol{\beta}$.
+
+* Algebraic Curves
+** Singular Points
+   A *singular point* is at a point where the gradient vanishes. We can not simply solve for $\nabla f = 0$ though. We have to also find a simultaneous solution for $f = 0$. These are singularities of the polynomial that lie on the curve.
+** Local Parametrization
+   Algebraic curves can be parametrized locally near non-singular points. They can be parametrized by $x$, $y$ or both. A *local parametrization* of an algebraic curve near a non-singular point $\left( a,b \right)$ is a parametrization $J \rightarrow \mathbb{R}^{2}$ of a piece of the curve including the point $\left( a,b \right)$.
+
+** Curvature
+   In general, algebraic curves cannot be parametrized in a simple way. So, we use a different method of finding the curvature using the *Hessian matrix* of a polynomial.
+
+   \begin{align*}
+       H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{xy} & f_{yy} \end{pmatrix}
+   \end{align*}
+
+   Then, the curvature is defined as:
+
+   \begin{align*}
+       \kappa = \frac{f_{y}^{2}f_{xx}-2f_{x}f_{y}f_{xy}+f_{x}^{2}f_{yy}}{\left(f_{x}^{2} + f_{y}^{2}\right)^{3/2}}
+   \end{align*}
+
+** Inflection Points
+   Algebraic curves have *inflection points* at non-singular points $\left(a,b\right)$ if and only if
+
+   \begin{align*}
+       f_{y}^{2}f_{xx}-2f_{x}f_{y}f_{xy}+f_{x}^{2}f_{yy} = 0
+   \end{align*}
+
+   at the point, changes signs as $\left(x,y\right)$ moves through the point.
+
+   So, to find all inflection points, we solve:
+
+   \begin{align*}
+       f\left(x,y\right) &= 0 \\
+       f_{y}^{2}f_{xx}-2f_{x}f_{y}f_{xy}+f_{x}^{2}f_{yy} &= 0
+   \end{align*}
+
+* Surfaces
+** Surface Patch
+   A *surface* is viewed as a collection of *homeomorphisms* $\boldsymbol{\sigma} : U \rightarrow S \cup W$ called *surface patches* where $u$ is a . This collection is called the *atlas* of the surface. Every point of the surface is in at least one surface patch.
+
+   A map is smooth if each component of the map has continuous partial derivatives of all orders. A surface patch is *regular* if it is smooth and $\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \neq 0$ at every point of $U$. A *smooth surface* is one whose atlas consists of regular surface patches.
+
+** Orientable Surface
+   We define the *tangent space* at a point $\boldsymbol{p}$ of a surface to consist of the tangent vectors of all curves on the surface that pass through $\boldsymbol{p}$. It is uniquely defined by the *unit normal* to the surface at the point, which is perpendicular to the tangent space, also known as the *tangent plane*.
+
+   \begin{align*}
+       \boldsymbol{n}_{\sigma} = \frac{\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v}}{\lvert\lvert \boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \lvert\lvert}
+   \end{align*}
+
+   This is called the *standard unit normal*. A surface is *orientable* if there is a canonical choice for the unit normal at every point, obtained by taking the standard unit normal of each surface patch in the atlas.
+
+** Surface Curves
+   If we have a curve in a surface patch, then we can calculate the arc length as:
+
+   \begin{align*}
+       s = \int_{t_{0}}^{t} \lvert\lvert \dot{\boldsymbol{\alpha}}\left(w\right) \lvert\lvert dw
+   \end{align*}
+
+   The *normal curvature* and *geodesic curvature* of a surface curve $\boldsymbol{\gamma}\left(t\right)$ are:
+
+   \begin{align*}
+       \kappa_{n} &= \ddot{\boldsymbol{\gamma}} \cdot \hat{\boldsymbol{n}} \\
+       \kappa_{g} &= \ddot{\boldsymbol{\gamma}} \cdot \left(\hat{\boldsymbol{n}} \times \dot{\boldsymbol{\gamma}}\right)
+   \end{align*}
+
+The *Gaussian curvature* and *mean curvature* of a surface patch respectively are:
+
+\begin{align*}
+    K =  \kappa_{1}\kappa_{2} &= \frac{LN - M^{2}}{EG - F^{2}} \\
+    H = \frac{1}{2}\left(\kappa_{1} + \kappa_{2}\right) &= \frac{1}{2}\frac{LG - 2MF + NE}{EG-F^{2}}
+\end{align*}
+
+where $\kappa_{1}$ and $\kappa_{2}$ are the principal curvatures.
+
+** First Fundamental Form
+   *First fundamental form* of a surface patch represents the principal part of the square of the increment on the surface patch when the parameters $u$ and $v$ are increased by $du$ and $dv$ respectively.
+
+   \begin{center}
+       \begin{tabular}{ c c c }
+           $E = \boldsymbol{\sigma}_{u} \cdot \boldsymbol{\sigma}_{u}$ & $F = \boldsymbol{\sigma}_{u} \cdot \boldsymbol{\sigma}_{v}$ & $G = \boldsymbol{\sigma}_{v} \cdot \boldsymbol{\sigma}_{v}$
+       \end{tabular}
+   \end{center}
+
+   So the first fundamental form is:
+
+   \begin{align*}
+       ds^{2} = Edu^{2} + 2Fdudv + Gdv^{2}
+   \end{align*}
+
+   Thus, the *arc length* is:
+
+   \begin{align*}
+       s &= \int_{t_{0}}^{t} \sqrt{E\dot{u}^{2} + 2F\dot{u}\dot{v} + G\dot{v}^{2}}dt \\
+       &= \int_{\alpha} = \sqrt{Edu^{2} + 2Fdudv + Gdv^{2}}
+   \end{align*}
+
+   The *metric tensor* of the surface is:
+
+   \begin{align*}
+       \mathcal{F}_{1} = \begin{pmatrix} E & F \\ F & G \end{pmatrix}
+   \end{align*}
+
+   The first fundamental form is invariant to parametrization.
+
+** Second Fundamental Form
+   Let the standard unit normal be:
+
+   \begin{align*}
+       \hat{\boldsymbol{n}} = \frac{\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v}}{\lvert\lvert \boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \lvert\lvert} = \frac{\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v}}{\sqrt{EG - F^{2}}}
+   \end{align*}
+
+   The *second fundamental form* has elements:
+
+   \begin{center}
+       \begin{tabular}{ c c c }
+           $L = \boldsymbol{\sigma}_{uu} \cdot \hat{\boldsymbol{\sigma}}$ & $M = \boldsymbol{\sigma}_{uv} \cdot \hat{\boldsymbol{\sigma}}$ & $N = \boldsymbol{\sigma}_{vv} \cdot \hat{\boldsymbol{\sigma}}$
+       \end{tabular}
+   \end{center}
+
+   And takes the form:
+
+   \begin{align*}
+       Ldu^{2} + 2Mdudv + Ndv^{2}
+   \end{align*}
+
+** Surface Area
+   The surface area is:
+
+   \begin{align*}
+       \int \int_{U} \sqrt{EG - F^{2}} dudv
+   \end{align*}
+
+** Darboux Frame
+   If we look at a unit-speed curve $\gamma$, then we have a frame called the *Darboux frame* defined by $\dot{\boldsymbol{\gamma}}$, $\hat{\boldsymbol{n}}$, and $\hat{\boldsymbol{n}} \times \dot{\boldsymbol{\gamma}}$. We let these be $T$, $U$, and $V$ respectively. Then, we have:
+
+   \begin{align*}
+       \begin{pmatrix} T' \\ U' \\ V' \end{pmatrix} =
+       \begin{pmatrix}
+           0 & \kappa_{g} & \kappa_{n} \\
+           -\kappa_{g} & 0 & \tau_{g} \\
+           -\kappa_{n} & -\tau_{g} & 0
+       \end{pmatrix}
+       \begin{pmatrix} T & V & U \end{pmatrix}
+   \end{align*}
+
+* Geodesics
+* Nonlinear Optimization
+* Data Fitting
+* Orthogonal Polynomials
+* Fourier Series
+* Calculus of Variations
+* Probability
+  Probability of one or more events $A$ given a set of possible outcomes $S$ is defined by Laplace as:
+
+  \begin{align*}
+      Pr\left(A\right) = \frac{\vert A \vert}{\vert S \vert}
+  \end{align*}
+  
+  We also have conditional probability which is defined as the probability of event A given event B where $Pr\left(B\right) > 0$.
+
+  \begin{align*}
+       Pr\left(A \mid B\right) = \frac{Pr\left(A \cap B\right)}{Pr\left(B\right)}
+  \end{align*}
+  
+  We call the probability of A the *a priori* probability. The conditional probability of A given B is called the *a posteriori* probability.
+
+** Random Variables
+   Random variables are functions from the sample space $S$ of an experiment to the set of real numbers. It simply assigns a real number to each possible outcome.
+   
+   Random variables can be either *discrete* or *continuous*.
+   
+** Cumulative Distribution Function
+   Given a random variable $X$, its *cumulative distribution function (CDF)* is defined as:
+
+   \begin{align*}
+       D\left( x \right) = Pr\left(X \leq x\right)
+  \end{align*}
+   
+   If we have a *discrete* probability $Pr\left( x \right)$, that is the probability that a discrete random variable $X$ has value $x$, we have:
+
+   \begin{align*}
+       D\left( x \right) = \sum_{X \leq x} Pr\left( X \right)
+   \end{align*}
+
+**** Properties
+     \begin{align*}
+         D\left( x \right) &\in \left[0,1\right] \\
+         D\left( -\infty \right) &= 0 \\
+         D\left( \infty \right) &= 1 \\
+         D\left( a \right) &\leq D\left( b \right)\ \text{if} a < b \\
+         Pr\left( a < X \leq b \right) &= D\left( b \right) - D\left( a \right)
+     \end{align*}
+
+** Probability Density Function
+   The *probability density function (PDF)* $P\left( x \right)$ of a continuous random variable is defined as the derivative of the cumulative distribution function $D\left( x \right)$.
+
+   \begin{align*}
+       P\left( x \right) &= \frac{d}{dx}D\left( x \right) \\
+       D\left( x \right) &= \int_{-\infty}^{x} P\left( \xi \right) d\xi
+   \end{align*}
+
+**** Properties
+     \begin{align*}
+         P\left( x \right) &\geq 0 \\
+         \int_{-\infty}^{\infty} P\left( x \right)dx &= 1 \\
+         D\left( a < x \leq b \right) &= \int_{a}^{b} P\left( x \right)dx
+    \end{align*}
+
+    A *uniform distribution* has constant PDF. The PDF and CDF on the interval $\left[ a,b \right]$ are:
+
+    \begin{align*}
+        P\left( x \right) &= \begin{cases}
+                                 0 &\text{for } x < a, \\
+                                 \frac{1}{b - a} &\text{for } a \leq x \leq b, \\
+                                 0 &\text{for } x > b;
+                             \end{cases} \\
+        D\left( x \right) &= \begin{cases}
+                                 0 &\text{for } x < a, \\
+                                 \frac{x - a}{b - a} &\text{for } a \leq x \leq b, \\
+                                 1 &\text{for } x > b;
+                             \end{cases}
+    \end{align*}
+
+** Generating Continuous Distributions
+    Built-in random functions like C++'s ~rand~ generate uniformly distributed pseudo-random numbers. If we want to generate uniform random points for a different distribution, say for a circle of radius $\rho$, then we can do so using CDF.
+
+    $D\left( x \right)$ increases monotonically from zero to one. If we suppose $D\left( x \right)$ is continuous and strictly increasing, then there exists an inverse $D^{-1}\left( y \right)$ such that, for $0 < y < 1$,
+
+    \begin{center}
+        \begin{tabular}{ c c c }
+            $y = D\left( x \right)$ & if and only if & $x = D^{-1}\left( y \right)$
+        \end{tabular}
+    \end{center}
+
+    We can compute a random variable $X$ with distribution $D\left( x \right)$ by setting:
+
+    \begin{align*}
+        X = D^{-1}\left( Y \right)
+    \end{align*}
+
+    where $Y$ is a random variable with uniform distribution over $\left[0, 1\right]$. The reasoning is:
+
+    \begin{align*}
+        Pr\left( X \leq x \right) &= Pr\left( D^{-1}\left(Y\right) \leq x \right) \\
+        &= Pr\left(Y \leq D\left( x \right)\right) \\
+        &= D\left( x \right)
+    \end{align*}
+
+    *Example: Uniformly Distributed Random Points*
+
+    Suppose we want a uniform distribution of random points in a rectangle with dimensions $\left(l,w\right)$. We can do it by using built in pseudo-random functions such as C++'s ~rand~ to get a number in the interval $\left[0,65535\right]$. We can normalize this to the interval $\left[0,1\right]$. Now, we can plot a point $\left(X,Y\right)$ where $X$ and $Y$ are uniformly distributed within the intervals $\left[0,l\right]$ and $\left[0,w\right]$ respectively. Simply multiply the random output by $l$ and $w$ after normalizing.
+
+    Now, suppose we want a uniform distribution of random points in a *circle* of radius $\rho$. If we simply plot a point $\left(R,\Theta\right)$ where $R$ and $\Theta$ are uniformly distributed within the intervals $\left[0,\rho\right]$ and $\left[0,2\pi\right]$ respectively. We will find that the distribution is more densely populated near the origin. Hence, we need to find a distribution for $R$. Consider the CDF:
+
+    \begin{align*}
+        D\left( r \right) = Pr\left( R \leq r \right) = \frac{\pi r^{2}}{\pi \rho^{2}} = \frac{r^{2}}{\rho^{2}}
+    \end{align*}
+
+Clearly, $D\left( r \right) \in \left[0,1\right]$. So, if we let $s = D\left( r \right)$, we let $r = \rho\sqrt{s}$. Introduce a random variable $S$ with uniform distribution over $\left[0,1\right]$. So, $R = \rho\sqrt{S}$.
+
+Thus, random points should be generated at $\rho\sqrt{S}\left(\cos\Theta,\sin\Theta\right)$, where $S$ and $\Theta$ are random variables with uniform distributions over $\left[0,1\right]$ and $\left[0,2\pi\right]$.
+
+** Mean $\left( \mu \right)$
+   The *mean* or *expected value*, of a random variable $X$ is its average value over a large number of experiments (say, $N$ experiments) with outcomes $x_{i}$ that occurs $n_{i}$ times for $i \in \left\lbrace 1, \ldots, m \right\rbrace$.
+
+   \begin{align*}
+       E\left( X \right) = \frac{1}{N}\sum_{i=1}^{m}x_{i}n_{i}
+   \end{align*}
+
+   *Example: Infinite Dice Rolls*
+
+   Suppose we roll a die an infinite number of times. Each number appears $\frac{1}{6}$ of the time. So, expected value is:
+
+   \begin{align*}
+       E\left( X \right) &= \lim_{n \rightarrow \infty} \frac{1}{n}\sum_{i=1}^{6} i \cdot \frac{n}{6} \\
+       &= \frac{7}{2}
+   \end{align*}
+
+   If the random variable $X$ with PDF $P\left( X \right)$ is continuous, then the expected is:
+
+   \begin{align*}
+       E\left( X \right) = \int_{-\infty}^{\infty} xP\left( x \right)dx
+   \end{align*}
+t
+** Standard Deviation $\left( \sigma \right)$
+    The *variance* measure the dispersion of the values about the mean. We can compute the variance of a discrete random variable with $N$ possible values $x_{1}, \ldots, x_{N}$ and mean $\mu$:
+
+    \begin{align*}
+        var\left( X \right) = \sum_{i=1}^{N} Pr\left( x_{i} \right)\left( x_{i} - \mu \right)^{2}
+    \end{align*}
+
+    $var\left( X \right) = \sigma^{2}$, and we call $\sigma$ the *standard deviation*. For a continuous distribution:
+
+    \begin{align*}
+        var\left( X \right) = \int_{-\infty}^{\infty} P\left( X \right)\left( x - \mu \right)^{2}dx
+    \end{align*}
+
+    So, we can rewrite variance as:
+
+    \begin{align*}
+        \sigma^{2} &= E\left(\left( X - \mu \right)\left( X - \mu \right)\right) \\
+        &= E\left( X^{2} - 2X\mu + \mu^{2} \right) \\
+        &= E\left( X^{2} \right) - 2\mu^{2} + \mu^{2} \\
+        &= E\left( X^{2} \right) - \mu^{2}
+    \end{align*}
+
+** Gaussian Distribution
+   A random variable $X$ with mean $\mu$ and variance $\sigma^{2}$ has *Gaussian distribution* or *normal distribution* if its probability density function is given by:
+
+   \begin{align*}
+       P\left( x \right) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\left( x - \mu \right)^{2}/\left(2\sigma^{2}\right)}
+   \end{align*}
+
+   We denote the Gaussian distribution as $N\left( \mu,\sigma^{2} \right)$.
+
+** Random Variables
+** Covariant (Matrix)
+** Correlation (Matrix)

@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-12-09 Fri 22:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>COM S 577 - Final Exam Study Guide</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Yan-Bin Jia" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">COM S 577 - Final Exam Study Guide</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org160c55e">1. Plane Curves</a>
+<ul>
+<li><a href="#org15397f2">1.1. Velocity, Speed, and Arc Length</a></li>
+<li><a href="#org6628542">1.2. Unit-Speed Reparametrization</a></li>
+<li><a href="#orgd0e581e">1.3. Tangent \(\left( T \right)\) and Normal \(\left( N \right)\)</a></li>
+<li><a href="#org73090ae">1.4. Curvature \(\left( \kappa \right)\)</a></li>
+<li><a href="#orgec1cf76">1.5. Center of Curvature, Osculating Circle, Radius of Curvature, and Total Curvature</a></li>
+<li><a href="#org821e151">1.6. Inflection and Vertex</a></li>
+<li><a href="#org1995d94">1.7. Arbitrary Speed Curves</a></li>
+<li><a href="#org5211527">1.8. Simple Closed Curves</a></li>
+</ul>
+</li>
+<li><a href="#org17b3046">2. Space Curves</a>
+<ul>
+<li><a href="#org7e3806a">2.1. Principal Normal</a></li>
+<li><a href="#org8bd2417">2.2. Binormal</a></li>
+<li><a href="#orge800560">2.3. Torsion \(\left( \tau \right)\)</a></li>
+<li><a href="#org1db5bad">2.4. Frenet Formulas</a>
+<ul>
+<li><a href="#org0996bef">2.4.1. Computing the Frenet Apparatus</a></li>
+</ul>
+</li>
+<li><a href="#org02931aa">2.5. Approximation</a></li>
+<li><a href="#orgefa1663">2.6. Osculating Plane</a></li>
+<li><a href="#orgef4f6fe">2.7. Spherical Image</a></li>
+</ul>
+</li>
+<li><a href="#org9bdc2d2">3. Algebraic Curves</a>
+<ul>
+<li><a href="#org3c02f24">3.1. Singular Points</a></li>
+<li><a href="#org91527be">3.2. Local Parametrization</a></li>
+<li><a href="#orgc4acb5f">3.3. Curvature</a></li>
+<li><a href="#orgebd54bf">3.4. Inflection Points</a></li>
+</ul>
+</li>
+<li><a href="#org028256b">4. Surfaces</a>
+<ul>
+<li><a href="#orgfb06a3a">4.1. Surface Patch</a></li>
+<li><a href="#orga7ecae2">4.2. Orientable Surface</a></li>
+<li><a href="#org4ddf535">4.3. Surface Curves</a></li>
+<li><a href="#org0d4afff">4.4. First Fundamental Form</a></li>
+<li><a href="#org3ce792e">4.5. Second Fundamental Form</a></li>
+<li><a href="#org42f5312">4.6. Surface Area</a></li>
+<li><a href="#orgb9d66b3">4.7. Darboux Frame</a></li>
+</ul>
+</li>
+<li><a href="#orgf292174">5. Geodesics</a></li>
+<li><a href="#org2864f5e">6. Nonlinear Optimization</a></li>
+<li><a href="#org0120935">7. Data Fitting</a></li>
+<li><a href="#orgbd111a6">8. Orthogonal Polynomials</a></li>
+<li><a href="#org349ff8d">9. Fourier Series</a></li>
+<li><a href="#orge5c2f05">10. Calculus of Variations</a></li>
+<li><a href="#org787cd98">11. Probability</a>
+<ul>
+<li><a href="#org6dbe9f9">11.1. Random Variables</a></li>
+<li><a href="#orgc4d6eb3">11.2. Cumulative Distribution Function</a></li>
+<li><a href="#orga7e01c4">11.3. Probability Density Function</a></li>
+<li><a href="#org03c091a">11.4. Generating Continuous Distributions</a></li>
+<li><a href="#org7bfa3e4">11.5. Mean \(\left( \mu \right)\)</a></li>
+<li><a href="#org2b9afb4">11.6. Standard Deviation \(\left( \sigma \right)\)</a></li>
+<li><a href="#org8388680">11.7. Gaussian Distribution</a></li>
+<li><a href="#orgcff7928">11.8. Random Variables</a></li>
+<li><a href="#orgc0cee1d">11.9. Covariant (Matrix)</a></li>
+<li><a href="#org71c15ff">11.10. Correlation (Matrix)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org160c55e" class="outline-2">
+<h2 id="org160c55e"><span class="section-number-2">1</span> Plane Curves</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Curves are differentiable functions. We denote them \(\boldsymbol{\alpha} : \left[a,b\right] \rightarrow \mathbb{R}^{2} \left(\text{or } \mathbb{R}^{3}\right)\).
+</p>
+
+<p>
+A curve \(\boldsymbol{\alpha}\left( t \right) = \left( x\left( t \right), y\left( t \right) \right)\) is said to be <b>smooth</b> at \(t = t_{0}\) if its \(k\text{th}\) derivative exists for any integer \(k > 0\).
+</p>
+
+\begin{align*}
+    \boldsymbol{\alpha}^{\left( k \right)}\left( t \right) = \left( x^{\left( k \right)}\left( t \right), y^{\left( k \right)} \left( t \right) \right)
+\end{align*}
+
+<p>
+A curve is <b>piecewise smooth</b> if it has a domain which is the union of a finite number of subintervals of each of which the curve is smooth. A polygon is piecewise smooth for each of its sides.
+</p>
+
+<p>
+A curve is a <b>closed parametric curve</b> if \(\boldsymbol{\alpha}\left( a \right) = \boldsymbol{\alpha}\left( b \right)\). A point of <i>self-crossing</i> is a point \(\boldsymbol{\alpha}\left( t_{1} \right)\) for which there exists finitely many distinct values \(t_{1}, \ldots, t_{n} \in \left[a,b\right]\) for \(n \geq 2\) which satisfy \(\boldsymbol{\alpha}\left( t_{1} \right) = \ldots = \boldsymbol{\alpha}\left( t_{n} \right)\) and in the case \(n = 2\), \(\left[t_{1},t_{2}\right] \neq \left[a,b\right]\). For example, a circle is closed, but does not have self-crossings. A figure eight is closed and self-crossing.
+</p>
+</div>
+
+<div id="outline-container-org15397f2" class="outline-3">
+<h3 id="org15397f2"><span class="section-number-3">1.1</span> Velocity, Speed, and Arc Length</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+For a curve \(\boldsymbol{\alpha}\left( t \right)\), the <b>velocity vector</b> at \(t\) is \(\boldsymbol{\alpha}'\left( t \right)\). The <b>speed</b> at \(t\) is the length \(\lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert\). This is clear if we see the curve as a particle moving on a path. The parametrization \(\boldsymbol{\alpha}\left( t \right)\) is <b>unit-speed</b> if the \(\lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert = 1\) for all values of \(t\). When the speed vanishes, the curve has a <b>cusp</b>. A curve is <b>regular</b> if the velocity vectors are non-zero for all \(t\). The <b>arc length</b> is defined by:
+</p>
+
+\begin{align*}
+    \int_{a}^{b} \lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert dt
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org6628542" class="outline-3">
+<h3 id="org6628542"><span class="section-number-3">1.2</span> Unit-Speed Reparametrization</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+A regular curve \(\boldsymbol{\alpha}\) has a reparametrization \(\tilde{\boldsymbol{\alpha}}\). Not all unit-speed reparametrizations have an explicit form, but we can use their existence for many computations on curves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0e581e" class="outline-3">
+<h3 id="orgd0e581e"><span class="section-number-3">1.3</span> Tangent \(\left( T \right)\) and Normal \(\left( N \right)\)</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+If we have a curve \(\boldsymbol{\alpha}\), then at a regular point on the curve, there exists a non-zero <b>tangent vector</b> \(\boldsymbol{\alpha}'\left( t \right) = \left(x'\left( t \right), y'\left( t \right)\right)\). It represents the velocity of the curve at the point. The normal vector is \(\left(-y'\left( t \right), x'\left( t \right)\right)\). This is a rotation of the tangent vector counterclockwise by \(\frac{\pi}{2}\). If the curve was unit-speed, then the tangent and normal are unit vectors.
+</p>
+
+<p>
+The cross product is non-zero. In the case of unit-speed curves, \(T \times N = 1\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73090ae" class="outline-3">
+<h3 id="org73090ae"><span class="section-number-3">1.4</span> Curvature \(\left( \kappa \right)\)</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+The <b>curvature</b> of a curve is defined as:
+</p>
+
+\begin{align*}
+    \kappa = \frac{d\phi}{ds}
+\end{align*}
+
+<p>
+where \(\phi\) is the angle from the \(x\text{-axis}\) to the tangent and \(s\) is the arc length. The <b>absolute curvature</b> is \(\lvert \kappa \lvert\).
+</p>
+
+<p>
+Since \(T \cdot T = 1\) and differentiating this equation yields \(T' \cdot T = 0\), we see that the change of \(T\left( s \right)\) is orthogonal to the tangential direction, so it must be in the normal direction. The curvature is defined as the turning of the tangent along the direction of the unit normal. So,
+</p>
+
+\begin{align*}
+    T' = \frac{dT}{ds} = \kappa N
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-orgec1cf76" class="outline-3">
+<h3 id="orgec1cf76"><span class="section-number-3">1.5</span> Center of Curvature, Osculating Circle, Radius of Curvature, and Total Curvature</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+When the curvature is positive then the <b>center of curvature</b> lies along the direction of the normal \(N\left( s \right)\) at a distance \(\frac{1}{\kappa}\) from the point \(\boldsymbol{\alpha}\left( s \right)\). When the curvature is negative, then the center of curvature lies in the direction of \(-N\left( s \right)\) at a distance of \(-\frac{1}{\kappa}\). The <b>radius of curvature</b> is \(\frac{1}{\lvert \kappa \lvert}\). Together, these form the <b>osculating circle</b>. This circle approximates the curve locally up to the second order. The <b>total curvature</b> over a closed interval \(\left[a,b\right]\) measures the rotation of the tangent as \(s\) changes from \(a\) to \(b\).
+</p>
+
+\begin{align*}
+    \Phi\left(a,b\right) &= \int_{a}^{b} \kappa ds \\
+    &= \int_{a}^{b} \frac{d\phi}{ds}ds \\
+    &= \int_{a}^{b} d\phi \\
+    &= \phi\left(b\right) - \phi\left(a\right)
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org821e151" class="outline-3">
+<h3 id="org821e151"><span class="section-number-3">1.6</span> Inflection and Vertex</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+A point \(s\) on the curve \(\boldsymbol{\alpha}\) is a <b>simple inflection</b>, or an <b>inflection</b>, if \(\kappa\left( s \right) = 0\), but \(\kappa'\left( s \right) \neq 0\). Intuitively, this is a point where the curve moves from one side of the tangent to the other or, for simple closed curves, when the curve switches from convex to concave or vice versa.
+</p>
+
+<p>
+A point where the curvature and first \(j-1\) order derivatives are zero but the \(j\text{th}\) derivative is non-zero is called an <b>inflection point of order \(j\)</b>. A second order inflection point is also called a point of <b>simple undulation</b> which will maintain concavity or convexity in the neighborhood on a simple closed curve.
+</p>
+
+<p>
+A <b>simple vertex</b>, or simply <b>vertex</b>, is a local minimum or maximum when \(\kappa' = 0\) but \(\kappa'' \neq 0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1995d94" class="outline-3">
+<h3 id="org1995d94"><span class="section-number-3">1.7</span> Arbitrary Speed Curves</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+If \(\boldsymbol{\alpha}\) is not necessarily unit-speed, then we obtain the tangent:
+</p>
+
+\begin{align*}
+    T = \frac{\boldsymbol{\alpha}'}{\lvert \lvert \boldsymbol{\alpha}' \lvert \lvert}
+\end{align*}
+
+<p>
+If we let \(v = \frac{\boldsymbol{\alpha}'}{\lvert \lvert \boldsymbol{\alpha}' \lvert \lvert}\), then we have that:
+</p>
+
+\begin{align*}
+    T' = \kappa v N
+\end{align*}
+
+<p>
+Intuitively we are simply normalizing the vectors by the speed. We also note that:
+</p>
+
+\begin{align*}
+    \kappa = \frac{\boldsymbol{\alpha}' \times \boldsymbol{\alpha}''}{\lvert \lvert \boldsymbol{\alpha}' \lvert \lvert^{3}}
+\end{align*}
+
+<p>
+We also find that <b>total curvature</b> is:
+</p>
+
+\begin{align*}
+    \Phi\left(a,b\right) = \int_{a}^{b} \kappa\left(t\right)\lvert\lvert\boldsymbol{\alpha}'\left(t\right)\lvert\lvert dt
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org5211527" class="outline-3">
+<h3 id="org5211527"><span class="section-number-3">1.8</span> Simple Closed Curves</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+We can say a <b>simple closed curve</b> is one that joins up the beginning and end.
+</p>
+
+\begin{center}
+    \begin{tabular}{ c c c }
+        $\boldsymbol{\alpha}\left(t\right) = \boldsymbol{\alpha}\left(u\right)$ & if and only if & $t - u = ka$ for some integer $k$
+    \end{tabular}
+\end{center}
+
+<p>
+The <b>area</b> is defined as:
+</p>
+
+\begin{align*}
+    A\left(a\right) &= \int \int_{int\left(\boldsymbol{\alpha}\right)} dxdy \\
+    &= \frac{1}{2} \int_{0}^{a} \left(xy' - yx'\right)dt
+\end{align*}
+
+<p>
+Then, we find that if we have a simple closed curve with length \(l\) and area \(A\),
+</p>
+
+\begin{align*}
+    A \leq \frac{1}{4\pi}l^{2}
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org17b3046" class="outline-2">
+<h2 id="org17b3046"><span class="section-number-2">2</span> Space Curves</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A plane curve is determined by curvature. Space curves are not. A circle on the \(xy-\text{plane}\) and a circular helix have unit curvature everywhere, but can not be transformed to one another. Instead, we measure space curves with curvature and torsion.
+</p>
+
+<p>
+If we have a unit-speed space curve \(\gamma\left(s\right)\) in \(\mathbb{R}^{3}\), we can denote the unit tangent vector as \(T = \gamma'\left(s\right)\). We have the real-valued <b>curvature function</b> \(kappa\left(s\right) = \lvert\lvert T'\left(s\right) \lvert\lvert \geq 0\).
+</p>
+</div>
+
+<div id="outline-container-org7e3806a" class="outline-3">
+<h3 id="org7e3806a"><span class="section-number-3">2.1</span> Principal Normal</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+The principal normal of a space curve \(\gamma\left( s \right)\) is the vector:
+</p>
+
+\begin{align*}
+    N\left( s \right) = \frac{1}{\kappa\left(s\right)}T'\left(s\right)
+\end{align*}
+
+<p>
+Since \(\lvert\lvert T'\left(s\right) \lvert\lvert = \kappa\), \(N\) is a unit vector. Similarly, \(T' \cdot T = 0\) so T and N are orthogonal to each other.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bd2417" class="outline-3">
+<h3 id="org8bd2417"><span class="section-number-3">2.2</span> Binormal</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+The <b>binormal</b> is:
+</p>
+
+\begin{align*}
+    B = T \times N
+\end{align*}
+
+<p>
+Then, \(\left\lbrace T\left(s\right), N\left(s\right), B\left(s\right) \right\rbrace\) form an <b>orthonormal basis</b> of \(\mathbb{R}^{3}\) where each is orthogonal to the other two. They form the <b>Frenet frame</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge800560" class="outline-3">
+<h3 id="orge800560"><span class="section-number-3">2.3</span> Torsion \(\left( \tau \right)\)</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+We define the <b>torsion</b> as:
+</p>
+
+\begin{align*}
+    B' = -\tau N
+\end{align*}
+
+<p>
+We can see that:
+</p>
+
+\begin{align*}
+    \frac{d\theta}{ds} B'\left(s\right) \cdot N\left(s\right) = -\tau
+\end{align*}
+
+<p>
+\(-\tau\) represents the rate of binormal rotation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1db5bad" class="outline-3">
+<h3 id="org1db5bad"><span class="section-number-3">2.4</span> Frenet Formulas</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Given a unit-speed curve with positive curvature and some torsion,
+</p>
+
+\begin{center}
+    \begin{tabular}{ c c c c c }
+        $T'$ & $=$ & & $\kappa N$ & \\
+        $N'$ & $=$ & $-\kappa T$ & & $+\tau B$ \\
+        $B'$ & $=$ & & $-\tau N$ &
+    \end{tabular}
+\end{center}
+
+<p>
+Remember the matrix:
+</p>
+
+\begin{align*}
+    \begin{pmatrix}
+        0 & \kappa & 0 \\
+        -\kappa & 0 & \tau \\
+        0 & -\tau & 0
+    \end{pmatrix}
+\end{align*}
+
+<p>
+If we multiply by the column vector \(\left( T, N, B \right)^{T}\), then we can get the Frenet formulas.
+</p>
+
+<p>
+The <b>Frenet frame</b> consists of the <b>curvature function</b>, the <b>torsion function</b>, the <b>unit tangent</b>, the <b>principal normal</b>, and the <b>binormal</b>. In cases of arbitrary-speed curves, we define:
+</p>
+
+\begin{align*}
+    \kappa &= \tilde{\kappa}\left(s\right)
+    \tau &= \tilde{\tau}\left(s\right)
+    T &= \tilde{T}\left(s\right)
+    N &= \tilde{N}\left(s\right)
+    B &= \tilde{B}\left(s\right)
+\end{align*}
+
+<p>
+This is true because the Frenet frame is <b>independent</b> of the parametrization. For example for \(s\) being an arc-length function of the curve, \(\boldsymbol{\alpha}\left(t\right) = \boldsymbol{\alpha}\left(s\left(t\right)\right)\). Only the <b>derivatives are affected by parametrization</b> where we simply use the speed \(v\) of the curve to correct the values of \(T'\), \(N'\), and \(B'\).
+</p>
+
+\begin{center}
+    \begin{tabular}{ c c c c c }
+        $T'$ & $=$ & & $\kappa vN$ & \\
+        $N'$ & $=$ & $-\kappa vT$ & & $+\tau vB$ \\
+        $B'$ & $=$ & & $-\tau vN$ &
+    \end{tabular}
+\end{center}
+
+<p>
+Intuitively, a unit-speed curve has speed \(v=1\), so the Frenet formulas are as defined earlier.
+</p>
+</div>
+
+<div id="outline-container-org0996bef" class="outline-4">
+<h4 id="org0996bef"><span class="section-number-4">2.4.1</span> Computing the Frenet Apparatus</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+<b>Theorem 3</b> <i>Let \(\boldsymbol{\alpha}\) be a regular curve in \(\mathbb{R}^{3}\), and \(\boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \neq 0\). Then,</i>
+</p>
+
+\begin{align*}
+T &= \frac{\boldsymbol{\alpha}'}{\lvert\lvert \boldsymbol{\alpha}' \lvert\lvert} \\
+B &= \frac{\boldsymbol{\alpha}' \times \boldsymbol{\alpha}''}{\lvert\lvert \boldsymbol{\alpha}' \times \boldsymbol{\alpha}''\lvert\lvert} \\
+N &= B \times T \\
+\kappa &= \frac{\lvert\lvert \boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \lvert\lvert}{\lvert\lvert \boldsymbol{\alpha}' \lvert\lvert^{3}} \\
+\tau &= \frac{\left(\boldsymbol{\alpha}' \times \boldsymbol{\alpha}''\right) \cdot \boldsymbol{\alpha}'''}{\lvert\lvert \boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \lvert\lvert^{2}}
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org02931aa" class="outline-3">
+<h3 id="org02931aa"><span class="section-number-3">2.5</span> Approximation</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Consider the unit-speed curve \(\boldsymbol{\beta} = \left( \beta_{1}, \beta_{2}, \beta_{3} \right)\) near the point \(\boldsymbol{\beta}\left(0\right)\). For a small \(s\), each coordinate \(\beta_{i}\left(s\right)\) is closely approximated by the Taylor series. So,
+</p>
+
+\begin{align*}
+    \boldsymbol{\beta}\left(s\right) \approx \boldsymbol{\beta}\left(0\right) + s\boldsymbol{\beta}'\left(0\right) + \frac{s^{2}}{2}\boldsymbol{\beta}''\left(0\right) + \frac{s^{3}}{6}\boldsymbol{\beta}'''\left(0\right)
+\end{align*}
+
+<p>
+However, we know the first and second derivative of \(\boldsymbol{\beta}\) at \(s = 0\) are:
+</p>
+
+\begin{align*}
+    \boldsymbol{\beta}'\left(0\right) = T_{0} \\
+    \boldsymbol{\beta}''\left(0\right) = \kappa_{0}N_{0}
+\end{align*}
+
+<p>
+Where subscript is evaluation at \(s = 0\). Then, the third derivative is defined as:
+</p>
+
+\begin{align*}
+    \boldsymbol{\beta}'''\left(0\right) = -\kappa_{0}^{2}T_{0} + \frac{d\kappa}{ds}\left(0\right)N_{0} + \kappa_{0}\tau_{0}B_{0}
+\end{align*}
+
+<p>
+So, the approximation becomes:
+</p>
+
+\begin{align*}
+    \boldsymbol{\beta}\left(s\right) \approx \boldsymbol{\beta}\left(0\right) + sT_{0} + \kappa_{0}\frac{s^{2}}{2}N_{0} + \kappa_{0}\tau_{0}\frac{s^{3}}{6}B_{0}
+\end{align*}
+
+<p>
+This is the <b>Frenet approximation of \(\boldsymbol{\beta}\) near \(s = 0\)</b>. We can get an approximation at some \(s_{0}\) by replacing \(0\) with \(s_{0}\) and \(s\) with \(s - s_{0}\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefa1663" class="outline-3">
+<h3 id="orgefa1663"><span class="section-number-3">2.6</span> Osculating Plane</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Using the <b>Frenet approximation</b>, we can get the best linear or quadratic approximation of the curve. This approximation lies in the plane through the approximated point orthogonal to the binormal. This is called the <b>osculating plane of \(\boldsymbol{\beta}\) near \(s_{0}\)</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef4f6fe" class="outline-3">
+<h3 id="orgef4f6fe"><span class="section-number-3">2.7</span> Spherical Image</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+Given a unit-speed curve \(\boldsymbol{\beta}\), then the curve \(\boldsymbol{\sigma}\left(s\right) = T\left(s\right) = \boldsymbol{\beta}'\left(s\right)\) is called the <b>spherical image</b> of \(\boldsymbol{\beta}\).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9bdc2d2" class="outline-2">
+<h2 id="org9bdc2d2"><span class="section-number-2">3</span> Algebraic Curves</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-org3c02f24" class="outline-3">
+<h3 id="org3c02f24"><span class="section-number-3">3.1</span> Singular Points</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+A <b>singular point</b> is at a point where the gradient vanishes. We can not simply solve for \(\nabla f = 0\) though. We have to also find a simultaneous solution for \(f = 0\). These are singularities of the polynomial that lie on the curve.
+</p>
+</div>
+</div>
+<div id="outline-container-org91527be" class="outline-3">
+<h3 id="org91527be"><span class="section-number-3">3.2</span> Local Parametrization</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Algebraic curves can be parametrized locally near non-singular points. They can be parametrized by \(x\), \(y\) or both. A <b>local parametrization</b> of an algebraic curve near a non-singular point \(\left( a,b \right)\) is a parametrization \(J \rightarrow \mathbb{R}^{2}\) of a piece of the curve including the point \(\left( a,b \right)\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4acb5f" class="outline-3">
+<h3 id="orgc4acb5f"><span class="section-number-3">3.3</span> Curvature</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+In general, algebraic curves cannot be parametrized in a simple way. So, we use a different method of finding the curvature using the <b>Hessian matrix</b> of a polynomial.
+</p>
+
+\begin{align*}
+    H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{xy} & f_{yy} \end{pmatrix}
+\end{align*}
+
+<p>
+Then, the curvature is defined as:
+</p>
+
+\begin{align*}
+    \kappa = \frac{f_{y}^{2}f_{xx}-2f_{x}f_{y}f_{xy}+f_{x}^{2}f_{yy}}{\left(f_{x}^{2} + f_{y}^{2}\right)^{3/2}}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-orgebd54bf" class="outline-3">
+<h3 id="orgebd54bf"><span class="section-number-3">3.4</span> Inflection Points</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Algebraic curves have <b>inflection points</b> at non-singular points \(\left(a,b\right)\) if and only if
+</p>
+
+\begin{align*}
+    f_{y}^{2}f_{xx}-2f_{x}f_{y}f_{xy}+f_{x}^{2}f_{yy} = 0
+\end{align*}
+
+<p>
+at the point, changes signs as \(\left(x,y\right)\) moves through the point.
+</p>
+
+<p>
+So, to find all inflection points, we solve:
+</p>
+
+\begin{align*}
+    f\left(x,y\right) &= 0 \\
+    f_{y}^{2}f_{xx}-2f_{x}f_{y}f_{xy}+f_{x}^{2}f_{yy} &= 0
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org028256b" class="outline-2">
+<h2 id="org028256b"><span class="section-number-2">4</span> Surfaces</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-orgfb06a3a" class="outline-3">
+<h3 id="orgfb06a3a"><span class="section-number-3">4.1</span> Surface Patch</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+A <b>surface</b> is viewed as a collection of <b>homeomorphisms</b> \(\boldsymbol{\sigma} : U \rightarrow S \cup W\) called <b>surface patches</b> where \(u\) is a . This collection is called the <b>atlas</b> of the surface. Every point of the surface is in at least one surface patch.
+</p>
+
+<p>
+A map is smooth if each component of the map has continuous partial derivatives of all orders. A surface patch is <b>regular</b> if it is smooth and \(\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \neq 0\) at every point of \(U\). A <b>smooth surface</b> is one whose atlas consists of regular surface patches.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7ecae2" class="outline-3">
+<h3 id="orga7ecae2"><span class="section-number-3">4.2</span> Orientable Surface</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+We define the <b>tangent space</b> at a point \(\boldsymbol{p}\) of a surface to consist of the tangent vectors of all curves on the surface that pass through \(\boldsymbol{p}\). It is uniquely defined by the <b>unit normal</b> to the surface at the point, which is perpendicular to the tangent space, also known as the <b>tangent plane</b>.
+</p>
+
+\begin{align*}
+    \boldsymbol{n}_{\sigma} = \frac{\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v}}{\lvert\lvert \boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \lvert\lvert}
+\end{align*}
+
+<p>
+This is called the <b>standard unit normal</b>. A surface is <b>orientable</b> if there is a canonical choice for the unit normal at every point, obtained by taking the standard unit normal of each surface patch in the atlas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ddf535" class="outline-3">
+<h3 id="org4ddf535"><span class="section-number-3">4.3</span> Surface Curves</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+If we have a curve in a surface patch, then we can calculate the arc length as:
+</p>
+
+\begin{align*}
+    s = \int_{t_{0}}^{t} \lvert\lvert \dot{\boldsymbol{\alpha}}\left(w\right) \lvert\lvert dw
+\end{align*}
+
+<p>
+The <b>normal curvature</b> and <b>geodesic curvature</b> of a surface curve \(\boldsymbol{\gamma}\left(t\right)\) are:
+</p>
+
+\begin{align*}
+    \kappa_{n} &= \ddot{\boldsymbol{\gamma}} \cdot \hat{\boldsymbol{n}} \\
+    \kappa_{g} &= \ddot{\boldsymbol{\gamma}} \cdot \left(\hat{\boldsymbol{n}} \times \dot{\boldsymbol{\gamma}}\right)
+\end{align*}
+
+<p>
+The <b>Gaussian curvature</b> and <b>mean curvature</b> of a surface patch respectively are:
+</p>
+
+\begin{align*}
+    K =  \kappa_{1}\kappa_{2} &= \frac{LN - M^{2}}{EG - F^{2}} \\
+    H = \frac{1}{2}\left(\kappa_{1} + \kappa_{2}\right) &= \frac{1}{2}\frac{LG - 2MF + NE}{EG-F^{2}}
+\end{align*}
+
+<p>
+where \(\kappa_{1}\) and \(\kappa_{2}\) are the principal curvatures.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d4afff" class="outline-3">
+<h3 id="org0d4afff"><span class="section-number-3">4.4</span> First Fundamental Form</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+<b>First fundamental form</b> of a surface patch represents the principal part of the square of the increment on the surface patch when the parameters \(u\) and \(v\) are increased by \(du\) and \(dv\) respectively.
+</p>
+
+\begin{center}
+    \begin{tabular}{ c c c }
+        $E = \boldsymbol{\sigma}_{u} \cdot \boldsymbol{\sigma}_{u}$ & $F = \boldsymbol{\sigma}_{u} \cdot \boldsymbol{\sigma}_{v}$ & $G = \boldsymbol{\sigma}_{v} \cdot \boldsymbol{\sigma}_{v}$
+    \end{tabular}
+\end{center}
+
+<p>
+So the first fundamental form is:
+</p>
+
+\begin{align*}
+    ds^{2} = Edu^{2} + 2Fdudv + Gdv^{2}
+\end{align*}
+
+<p>
+Thus, the <b>arc length</b> is:
+</p>
+
+\begin{align*}
+    s &= \int_{t_{0}}^{t} \sqrt{E\dot{u}^{2} + 2F\dot{u}\dot{v} + G\dot{v}^{2}}dt \\
+    &= \int_{\alpha} = \sqrt{Edu^{2} + 2Fdudv + Gdv^{2}}
+\end{align*}
+
+<p>
+The <b>metric tensor</b> of the surface is:
+</p>
+
+\begin{align*}
+    \mathcal{F}_{1} = \begin{pmatrix} E & F \\ F & G \end{pmatrix}
+\end{align*}
+
+<p>
+The first fundamental form is invariant to parametrization.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ce792e" class="outline-3">
+<h3 id="org3ce792e"><span class="section-number-3">4.5</span> Second Fundamental Form</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Let the standard unit normal be:
+</p>
+
+\begin{align*}
+    \hat{\boldsymbol{n}} = \frac{\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v}}{\lvert\lvert \boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \lvert\lvert} = \frac{\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v}}{\sqrt{EG - F^{2}}}
+\end{align*}
+
+<p>
+The <b>second fundamental form</b> has elements:
+</p>
+
+\begin{center}
+    \begin{tabular}{ c c c }
+        $L = \boldsymbol{\sigma}_{uu} \cdot \hat{\boldsymbol{\sigma}}$ & $M = \boldsymbol{\sigma}_{uv} \cdot \hat{\boldsymbol{\sigma}}$ & $N = \boldsymbol{\sigma}_{vv} \cdot \hat{\boldsymbol{\sigma}}$
+    \end{tabular}
+\end{center}
+
+<p>
+And takes the form:
+</p>
+
+\begin{align*}
+    Ldu^{2} + 2Mdudv + Ndv^{2}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org42f5312" class="outline-3">
+<h3 id="org42f5312"><span class="section-number-3">4.6</span> Surface Area</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+The surface area is:
+</p>
+
+\begin{align*}
+    \int \int_{U} \sqrt{EG - F^{2}} dudv
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-orgb9d66b3" class="outline-3">
+<h3 id="orgb9d66b3"><span class="section-number-3">4.7</span> Darboux Frame</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+If we look at a unit-speed curve \(\gamma\), then we have a frame called the <b>Darboux frame</b> defined by \(\dot{\boldsymbol{\gamma}}\), \(\hat{\boldsymbol{n}}\), and \(\hat{\boldsymbol{n}} \times \dot{\boldsymbol{\gamma}}\). We let these be \(T\), \(U\), and \(V\) respectively. Then, we have:
+</p>
+
+\begin{align*}
+    \begin{pmatrix} T' \\ U' \\ V' \end{pmatrix} =
+    \begin{pmatrix}
+        0 & \kappa_{g} & \kappa_{n} \\
+        -\kappa_{g} & 0 & \tau_{g} \\
+        -\kappa_{n} & -\tau_{g} & 0
+    \end{pmatrix}
+    \begin{pmatrix} T & V & U \end{pmatrix}
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf292174" class="outline-2">
+<h2 id="orgf292174"><span class="section-number-2">5</span> Geodesics</h2>
+</div>
+<div id="outline-container-org2864f5e" class="outline-2">
+<h2 id="org2864f5e"><span class="section-number-2">6</span> Nonlinear Optimization</h2>
+</div>
+<div id="outline-container-org0120935" class="outline-2">
+<h2 id="org0120935"><span class="section-number-2">7</span> Data Fitting</h2>
+</div>
+<div id="outline-container-orgbd111a6" class="outline-2">
+<h2 id="orgbd111a6"><span class="section-number-2">8</span> Orthogonal Polynomials</h2>
+</div>
+<div id="outline-container-org349ff8d" class="outline-2">
+<h2 id="org349ff8d"><span class="section-number-2">9</span> Fourier Series</h2>
+</div>
+<div id="outline-container-orge5c2f05" class="outline-2">
+<h2 id="orge5c2f05"><span class="section-number-2">10</span> Calculus of Variations</h2>
+</div>
+<div id="outline-container-org787cd98" class="outline-2">
+<h2 id="org787cd98"><span class="section-number-2">11</span> Probability</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Probability of one or more events \(A\) given a set of possible outcomes \(S\) is defined by Laplace as:
+</p>
+
+\begin{align*}
+    Pr\left(A\right) = \frac{\vert A \vert}{\vert S \vert}
+\end{align*}
+
+<p>
+We also have conditional probability which is defined as the probability of event A given event B where \(Pr\left(B\right) > 0\).
+</p>
+
+\begin{align*}
+     Pr\left(A \mid B\right) = \frac{Pr\left(A \cap B\right)}{Pr\left(B\right)}
+\end{align*}
+
+<p>
+We call the probability of A the <b>a priori</b> probability. The conditional probability of A given B is called the <b>a posteriori</b> probability.
+</p>
+</div>
+
+<div id="outline-container-org6dbe9f9" class="outline-3">
+<h3 id="org6dbe9f9"><span class="section-number-3">11.1</span> Random Variables</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+Random variables are functions from the sample space \(S\) of an experiment to the set of real numbers. It simply assigns a real number to each possible outcome.
+</p>
+
+<p>
+Random variables can be either <b>discrete</b> or <b>continuous</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4d6eb3" class="outline-3">
+<h3 id="orgc4d6eb3"><span class="section-number-3">11.2</span> Cumulative Distribution Function</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+Given a random variable \(X\), its <b>cumulative distribution function (CDF)</b> is defined as:
+</p>
+
+ \begin{align*}
+     D\left( x \right) = Pr\left(X \leq x\right)
+\end{align*}
+
+<p>
+If we have a <b>discrete</b> probability \(Pr\left( x \right)\), that is the probability that a discrete random variable \(X\) has value \(x\), we have:
+</p>
+
+\begin{align*}
+    D\left( x \right) = \sum_{X \leq x} Pr\left( X \right)
+\end{align*}
+</div>
+
+<ol class="org-ol"><li><a id="org3339114"></a>Properties<br  /><div class="outline-text-5" id="text-11-2-0-1">
+\begin{align*}
+    D\left( x \right) &\in \left[0,1\right] \\
+    D\left( -\infty \right) &= 0 \\
+    D\left( \infty \right) &= 1 \\
+    D\left( a \right) &\leq D\left( b \right)\ \text{if} a < b \\
+    Pr\left( a < X \leq b \right) &= D\left( b \right) - D\left( a \right)
+\end{align*}
+</div></li></ol>
+</div>
+
+<div id="outline-container-orga7e01c4" class="outline-3">
+<h3 id="orga7e01c4"><span class="section-number-3">11.3</span> Probability Density Function</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+The <b>probability density function (PDF)</b> \(P\left( x \right)\) of a continuous random variable is defined as the derivative of the cumulative distribution function \(D\left( x \right)\).
+</p>
+
+\begin{align*}
+    P\left( x \right) &= \frac{d}{dx}D\left( x \right) \\
+    D\left( x \right) &= \int_{-\infty}^{x} P\left( \xi \right) d\xi
+\end{align*}
+</div>
+
+<ol class="org-ol"><li><a id="orgc8817ec"></a>Properties<br  /><div class="outline-text-5" id="text-11-3-0-1">
+ \begin{align*}
+     P\left( x \right) &\geq 0 \\
+     \int_{-\infty}^{\infty} P\left( x \right)dx &= 1 \\
+     D\left( a < x \leq b \right) &= \int_{a}^{b} P\left( x \right)dx
+\end{align*}
+
+<p>
+A <b>uniform distribution</b> has constant PDF. The PDF and CDF on the interval \(\left[ a,b \right]\) are:
+</p>
+
+\begin{align*}
+    P\left( x \right) &= \begin{cases}
+                             0 &\text{for } x < a, \\
+                             \frac{1}{b - a} &\text{for } a \leq x \leq b, \\
+                             0 &\text{for } x > b;
+                         \end{cases} \\
+    D\left( x \right) &= \begin{cases}
+                             0 &\text{for } x < a, \\
+                             \frac{x - a}{b - a} &\text{for } a \leq x \leq b, \\
+                             1 &\text{for } x > b;
+                         \end{cases}
+\end{align*}
+</div></li></ol>
+</div>
+
+<div id="outline-container-org03c091a" class="outline-3">
+<h3 id="org03c091a"><span class="section-number-3">11.4</span> Generating Continuous Distributions</h3>
+<div class="outline-text-3" id="text-11-4">
+<p>
+Built-in random functions like C++'s <code>rand</code> generate uniformly distributed pseudo-random numbers. If we want to generate uniform random points for a different distribution, say for a circle of radius \(\rho\), then we can do so using CDF.
+</p>
+
+<p>
+\(D\left( x \right)\) increases monotonically from zero to one. If we suppose \(D\left( x \right)\) is continuous and strictly increasing, then there exists an inverse \(D^{-1}\left( y \right)\) such that, for \(0 < y < 1\),
+</p>
+
+\begin{center}
+    \begin{tabular}{ c c c }
+        $y = D\left( x \right)$ & if and only if & $x = D^{-1}\left( y \right)$
+    \end{tabular}
+\end{center}
+
+<p>
+We can compute a random variable \(X\) with distribution \(D\left( x \right)\) by setting:
+</p>
+
+\begin{align*}
+    X = D^{-1}\left( Y \right)
+\end{align*}
+
+<p>
+where \(Y\) is a random variable with uniform distribution over \(\left[0, 1\right]\). The reasoning is:
+</p>
+
+\begin{align*}
+    Pr\left( X \leq x \right) &= Pr\left( D^{-1}\left(Y\right) \leq x \right) \\
+    &= Pr\left(Y \leq D\left( x \right)\right) \\
+    &= D\left( x \right)
+\end{align*}
+
+<p>
+<b>Example: Uniformly Distributed Random Points</b>
+</p>
+
+<p>
+Suppose we want a uniform distribution of random points in a rectangle with dimensions \(\left(l,w\right)\). We can do it by using built in pseudo-random functions such as C++'s <code>rand</code> to get a number in the interval \(\left[0,65535\right]\). We can normalize this to the interval \(\left[0,1\right]\). Now, we can plot a point \(\left(X,Y\right)\) where \(X\) and \(Y\) are uniformly distributed within the intervals \(\left[0,l\right]\) and \(\left[0,w\right]\) respectively. Simply multiply the random output by \(l\) and \(w\) after normalizing.
+</p>
+
+<p>
+Now, suppose we want a uniform distribution of random points in a <b>circle</b> of radius \(\rho\). If we simply plot a point \(\left(R,\Theta\right)\) where \(R\) and \(\Theta\) are uniformly distributed within the intervals \(\left[0,\rho\right]\) and \(\left[0,2\pi\right]\) respectively. We will find that the distribution is more densely populated near the origin. Hence, we need to find a distribution for \(R\). Consider the CDF:
+</p>
+
+\begin{align*}
+    D\left( r \right) = Pr\left( R \leq r \right) = \frac{\pi r^{2}}{\pi \rho^{2}} = \frac{r^{2}}{\rho^{2}}
+\end{align*}
+
+<p>
+Clearly, \(D\left( r \right) \in \left[0,1\right]\). So, if we let \(s = D\left( r \right)\), we let \(r = \rho\sqrt{s}\). Introduce a random variable \(S\) with uniform distribution over \(\left[0,1\right]\). So, \(R = \rho\sqrt{S}\).
+</p>
+
+<p>
+Thus, random points should be generated at \(\rho\sqrt{S}\left(\cos\Theta,\sin\Theta\right)\), where \(S\) and \(\Theta\) are random variables with uniform distributions over \(\left[0,1\right]\) and \(\left[0,2\pi\right]\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bfa3e4" class="outline-3">
+<h3 id="org7bfa3e4"><span class="section-number-3">11.5</span> Mean \(\left( \mu \right)\)</h3>
+<div class="outline-text-3" id="text-11-5">
+<p>
+The <b>mean</b> or <b>expected value</b>, of a random variable \(X\) is its average value over a large number of experiments (say, \(N\) experiments) with outcomes \(x_{i}\) that occurs \(n_{i}\) times for \(i \in \left\lbrace 1, \ldots, m \right\rbrace\).
+</p>
+
+\begin{align*}
+    E\left( X \right) = \frac{1}{N}\sum_{i=1}^{m}x_{i}n_{i}
+\end{align*}
+
+<p>
+<b>Example: Infinite Dice Rolls</b>
+</p>
+
+<p>
+Suppose we roll a die an infinite number of times. Each number appears \(\frac{1}{6}\) of the time. So, expected value is:
+</p>
+
+\begin{align*}
+    E\left( X \right) &= \lim_{n \rightarrow \infty} \frac{1}{n}\sum_{i=1}^{6} i \cdot \frac{n}{6} \\
+    &= \frac{7}{2}
+\end{align*}
+
+<p>
+If the random variable \(X\) with PDF \(P\left( X \right)\) is continuous, then the expected is:
+</p>
+
+\begin{align*}
+    E\left( X \right) = \int_{-\infty}^{\infty} xP\left( x \right)dx
+\end{align*}
+<p>
+t
+</p>
+</div>
+</div>
+<div id="outline-container-org2b9afb4" class="outline-3">
+<h3 id="org2b9afb4"><span class="section-number-3">11.6</span> Standard Deviation \(\left( \sigma \right)\)</h3>
+<div class="outline-text-3" id="text-11-6">
+<p>
+The <b>variance</b> measure the dispersion of the values about the mean. We can compute the variance of a discrete random variable with \(N\) possible values \(x_{1}, \ldots, x_{N}\) and mean \(\mu\):
+</p>
+
+\begin{align*}
+    var\left( X \right) = \sum_{i=1}^{N} Pr\left( x_{i} \right)\left( x_{i} - \mu \right)^{2}
+\end{align*}
+
+<p>
+\(var\left( X \right) = \sigma^{2}\), and we call \(\sigma\) the <b>standard deviation</b>. For a continuous distribution:
+</p>
+
+\begin{align*}
+    var\left( X \right) = \int_{-\infty}^{\infty} P\left( X \right)\left( x - \mu \right)^{2}dx
+\end{align*}
+
+<p>
+So, we can rewrite variance as:
+</p>
+
+\begin{align*}
+    \sigma^{2} &= E\left(\left( X - \mu \right)\left( X - \mu \right)\right) \\
+    &= E\left( X^{2} - 2X\mu + \mu^{2} \right) \\
+    &= E\left( X^{2} \right) - 2\mu^{2} + \mu^{2} \\
+    &= E\left( X^{2} \right) - \mu^{2}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org8388680" class="outline-3">
+<h3 id="org8388680"><span class="section-number-3">11.7</span> Gaussian Distribution</h3>
+<div class="outline-text-3" id="text-11-7">
+<p>
+A random variable \(X\) with mean \(\mu\) and variance \(\sigma^{2}\) has <b>Gaussian distribution</b> or <b>normal distribution</b> if its probability density function is given by:
+</p>
+
+\begin{align*}
+    P\left( x \right) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\left( x - \mu \right)^{2}/\left(2\sigma^{2}\right)}
+\end{align*}
+
+<p>
+We denote the Gaussian distribution as \(N\left( \mu,\sigma^{2} \right)\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcff7928" class="outline-3">
+<h3 id="orgcff7928"><span class="section-number-3">11.8</span> Random Variables</h3>
+</div>
+<div id="outline-container-orgc0cee1d" class="outline-3">
+<h3 id="orgc0cee1d"><span class="section-number-3">11.9</span> Covariant (Matrix)</h3>
+</div>
+<div id="outline-container-org71c15ff" class="outline-3">
+<h3 id="org71c15ff"><span class="section-number-3">11.10</span> Correlation (Matrix)</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-12-13 Tue 12:00&gt;</span></span></p>
+<p class="author">Author: Yan-Bin Jia</p>
+<p class="date">Created: 2016-12-09 Fri 22:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
