@@ -304,14 +304,28 @@
        \kappa_{g} &= \ddot{\boldsymbol{\gamma}} \cdot \left(\hat{\boldsymbol{n}} \times \dot{\boldsymbol{\gamma}}\right)
    \end{align*}
 
-The *Gaussian curvature* and *mean curvature* of a surface patch respectively are:
+   The *Gaussian curvature* and *mean curvature* of a surface patch respectively are:
 
-\begin{align*}
-    K =  \kappa_{1}\kappa_{2} &= \frac{LN - M^{2}}{EG - F^{2}} \\
-    H = \frac{1}{2}\left(\kappa_{1} + \kappa_{2}\right) &= \frac{1}{2}\frac{LG - 2MF + NE}{EG-F^{2}}
-\end{align*}
+   \begin{align*}
+       K =  \kappa_{1}\kappa_{2} &= \frac{LN - M^{2}}{EG - F^{2}} \\
+       H = \frac{1}{2}\left(\kappa_{1} + \kappa_{2}\right) &= \frac{1}{2}\frac{LG - 2MF + NE}{EG-F^{2}}
+    \end{align*}
 
-where $\kappa_{1}$ and $\kappa_{2}$ are the principal curvatures.
+   where $\kappa_{1}$ and $\kappa_{2}$ are the principal curvatures.
+
+   The *Gauss map* is the mapping from a surface patch to the unit sphere at from $\boldsymbol{p} = \boldsymbol{\sigma}\left(u,v\right)$ to the point $\hat{\boldsymbol{n}}\left(u,v\right)$.
+
+   The *total Gaussian curvature* of some surface is:
+
+   \begin{align*}
+       \int \int_{S} KdS
+   \end{align*}
+
+   Which is the integral of the Gaussian curvature $K$ over $S$. If the surface is defined over the domain $\left[a,b\right] \times \left[c,d\right]$, then the total Gaussian curvature is:
+
+   \begin{align*}
+       \int_{c}^{d} \int_{a}^{b} K\left(u,v\right)\sqrt{EG-F^{2}}dudv
+   \end{align*}
 
 ** First Fundamental Form
    *First fundamental form* of a surface patch represents the principal part of the square of the increment on the surface patch when the parameters $u$ and $v$ are increased by $du$ and $dv$ respectively.
@@ -385,8 +399,51 @@ where $\kappa_{1}$ and $\kappa_{2}$ are the principal curvatures.
    \end{align*}
 
 * Geodesics
+  A curve is called a *geodesic* if the acceleration is either zero or parallel to its unit normal $\hat{\boldsymbol{n}}$.
+
+  *Proposition 1* /Every line can be reparametrized as a geodesic. Thus, a geodesic $\boldsymbol{\gamma}\left(t\right)$ on a surface $S$ has constant speed./
+
+  Thus, unit-speed parametrizations of geodesics are also geodesics.
+
+  *Proposition 2* /A curve on a surface is a geodesic if and only if its geodesic curvature is zero everywhere/
+
+  *Theorem 3* /A curve $\boldsymbol{\gamma}$ on a surface $S$ is a geodesic if and only if for any part $\boldsymbol{\gamma}\left(t\right) = \boldsymbol{\sigma}\left(u\left(t\right),v\left(t\right)\right)$ contained in a surface patch $\boldsymbol{\sigma}$ of $S$, the following two equations are satisfied:/
+
+  \begin{align*}
+      \frac{d}{dt}\left(E\dot{u} + F\dot{v}\right) = \frac{1}{2}\left(E_{u}\dot{u}^{2} + 2F_{u}\dot{u}\dot{v} + G_{u}\dot{v}^{2}\right) \\
+      \frac{d}{dt}\left(F\dot{u} + G\dot{v}\right) = \frac{1}{2}\left(E_{v}\dot{u}^{2} + 2F_{v}\dot{u}\dot{v} + G_{v}\dot{v}^{2}\right)
+  \end{align*}
+
+  /where $Edu^{2} + 2Fdudv + Gdv^{2}$ is the first fundamental form of $\boldsymbol{\sigma}$./
+
+These two equations are called the *geodesic equations*. They are nonlinear and solvable analytically on rare occasions only.
+
+** Isometry
+   An *isometry* is a *diffeomorphism* that maps curves from one surface to curves of the same length in another surface. A *diffeomorphism* is a mapping from one surface to another that is smooth, bijective, and has an inverse map that is also smooth. The necessary conditions for $\boldsymbol{f}$ to be an isometry is any surface patch $\boldsymbol{\sigma}_{1}$ of $S_{1}$ and its image patch of $\boldsymbol{f} \circ \boldsymbol{\sigma}_{1}$ of $S_{2}$ have the same first fundamental form.
+
+   *Theorem 5* /An isometry maps the geodesics of $S_{1}$ to the geodesics of $S_{2}$./
+
+** Shortest Paths
+   *Theorem 6* /Let $\boldsymbol{\gamma}$ be a shortest path on a surface $S$ connecting two points $\boldsymbol{p}$ and $\boldsymbol{q}$. Then the part of $\boldsymbol{\gamma}$ contained in any surface patch $\boldsymbol{\sigma}$ must be a geodesic./
+
+   The converse is not true. Not all geodesics are shortest paths. Additionally, a shortest path may not exist.
+
+** Geodesic Coordinates
+   We can use geodesics of a surface to construct an atlas for the surface. For any given unit-speed geodesic $\boldsymbol{\gamma}\left(v\right)$ that passes through a point $\boldsymbol{p}$ in $S$ at $v = 0$, then for any value of $v$, there exists a unique unit-speed geodesic $\boldsymbol{\beta}_{v}\left(u\right)$ such that $\boldsymbol{\beta}_{v}\left(0\right) = \boldsymbol{\gamma}\left(v\right)$ and $\boldsymbol{\beta}_{v}'\left(0\right) \perp \boldsymbol{\gamma}'\left(v\right)$. We define a patch $\boldsymbol{\sigma}\left(u,v\right) = \boldsymbol{\beta}_{v}\left(u\right)$ as a *geodesic patch*, and we call $u$ and $v$ *geodesic coordinates*.
+
 * Nonlinear Optimization
+** Golden Section Search
+** Gradient and Hessian
+** Convex Functions
+** Steepest Descent
+** Line Search
+** Constrained Optimization
+** Lagrange Multipliers
+
 * Data Fitting
+** Basis Functions
+** Least-Squares Fitting
+** Normal Equations
 * Orthogonal Polynomials
 * Fourier Series
 * Calculus of Variations

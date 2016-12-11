@@ -1,4 +1,4 @@
-% Created 2016-12-09 Fri 22:48
+% Created 2016-12-10 Sat 18:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -31,7 +31,7 @@
 
 
 \section{Plane Curves}
-\label{sec:org43d7be5}
+\label{sec:orgeabd9e5}
 Curves are differentiable functions. We denote them \(\boldsymbol{\alpha} : \left[a,b\right] \rightarrow \mathbb{R}^{2} \left(\text{or } \mathbb{R}^{3}\right)\).
 
 A curve \(\boldsymbol{\alpha}\left( t \right) = \left( x\left( t \right), y\left( t \right) \right)\) is said to be \textbf{smooth} at \(t = t_{0}\) if its \(k\text{th}\) derivative exists for any integer \(k > 0\).
@@ -45,7 +45,7 @@ A curve is \textbf{piecewise smooth} if it has a domain which is the union of a 
 A curve is a \textbf{closed parametric curve} if \(\boldsymbol{\alpha}\left( a \right) = \boldsymbol{\alpha}\left( b \right)\). A point of \emph{self-crossing} is a point \(\boldsymbol{\alpha}\left( t_{1} \right)\) for which there exists finitely many distinct values \(t_{1}, \ldots, t_{n} \in \left[a,b\right]\) for \(n \geq 2\) which satisfy \(\boldsymbol{\alpha}\left( t_{1} \right) = \ldots = \boldsymbol{\alpha}\left( t_{n} \right)\) and in the case \(n = 2\), \(\left[t_{1},t_{2}\right] \neq \left[a,b\right]\). For example, a circle is closed, but does not have self-crossings. A figure eight is closed and self-crossing.
 
 \subsection{Velocity, Speed, and Arc Length}
-\label{sec:org3e5e253}
+\label{sec:org62c9910}
 For a curve \(\boldsymbol{\alpha}\left( t \right)\), the \textbf{velocity vector} at \(t\) is \(\boldsymbol{\alpha}'\left( t \right)\). The \textbf{speed} at \(t\) is the length \(\lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert\). This is clear if we see the curve as a particle moving on a path. The parametrization \(\boldsymbol{\alpha}\left( t \right)\) is \textbf{unit-speed} if the \(\lvert\lvert \boldsymbol{\alpha}'\left( t \right) \lvert\lvert = 1\) for all values of \(t\). When the speed vanishes, the curve has a \textbf{cusp}. A curve is \textbf{regular} if the velocity vectors are non-zero for all \(t\). The \textbf{arc length} is defined by:
 
 \begin{align*}
@@ -53,17 +53,17 @@ For a curve \(\boldsymbol{\alpha}\left( t \right)\), the \textbf{velocity vector
 \end{align*}
 
 \subsection{Unit-Speed Reparametrization}
-\label{sec:org33ccccf}
+\label{sec:orgd037075}
 A regular curve \(\boldsymbol{\alpha}\) has a reparametrization \(\tilde{\boldsymbol{\alpha}}\). Not all unit-speed reparametrizations have an explicit form, but we can use their existence for many computations on curves.
 
 \subsection{Tangent \(\left( T \right)\) and Normal \(\left( N \right)\)}
-\label{sec:orgf7f4b34}
+\label{sec:org20f7445}
 If we have a curve \(\boldsymbol{\alpha}\), then at a regular point on the curve, there exists a non-zero \textbf{tangent vector} \(\boldsymbol{\alpha}'\left( t \right) = \left(x'\left( t \right), y'\left( t \right)\right)\). It represents the velocity of the curve at the point. The normal vector is \(\left(-y'\left( t \right), x'\left( t \right)\right)\). This is a rotation of the tangent vector counterclockwise by \(\frac{\pi}{2}\). If the curve was unit-speed, then the tangent and normal are unit vectors.
 
 The cross product is non-zero. In the case of unit-speed curves, \(T \times N = 1\).
 
 \subsection{Curvature \(\left( \kappa \right)\)}
-\label{sec:orgd900e2e}
+\label{sec:orgdfdf7a6}
 The \textbf{curvature} of a curve is defined as:
 
 \begin{align*}
@@ -79,7 +79,7 @@ Since \(T \cdot T = 1\) and differentiating this equation yields \(T' \cdot T = 
 \end{align*}
 
 \subsection{Center of Curvature, Osculating Circle, Radius of Curvature, and Total Curvature}
-\label{sec:orgf4de8ef}
+\label{sec:org9583cb9}
 When the curvature is positive then the \textbf{center of curvature} lies along the direction of the normal \(N\left( s \right)\) at a distance \(\frac{1}{\kappa}\) from the point \(\boldsymbol{\alpha}\left( s \right)\). When the curvature is negative, then the center of curvature lies in the direction of \(-N\left( s \right)\) at a distance of \(-\frac{1}{\kappa}\). The \textbf{radius of curvature} is \(\frac{1}{\lvert \kappa \lvert}\). Together, these form the \textbf{osculating circle}. This circle approximates the curve locally up to the second order. The \textbf{total curvature} over a closed interval \(\left[a,b\right]\) measures the rotation of the tangent as \(s\) changes from \(a\) to \(b\).
 
 \begin{align*}
@@ -90,7 +90,7 @@ When the curvature is positive then the \textbf{center of curvature} lies along 
 \end{align*}
 
 \subsection{Inflection and Vertex}
-\label{sec:org4f1db78}
+\label{sec:org3cec652}
 A point \(s\) on the curve \(\boldsymbol{\alpha}\) is a \textbf{simple inflection}, or an \textbf{inflection}, if \(\kappa\left( s \right) = 0\), but \(\kappa'\left( s \right) \neq 0\). Intuitively, this is a point where the curve moves from one side of the tangent to the other or, for simple closed curves, when the curve switches from convex to concave or vice versa.
 
 A point where the curvature and first \(j-1\) order derivatives are zero but the \(j\text{th}\) derivative is non-zero is called an \textbf{inflection point of order \(j\)}. A second order inflection point is also called a point of \textbf{simple undulation} which will maintain concavity or convexity in the neighborhood on a simple closed curve.
@@ -98,7 +98,7 @@ A point where the curvature and first \(j-1\) order derivatives are zero but the
 A \textbf{simple vertex}, or simply \textbf{vertex}, is a local minimum or maximum when \(\kappa' = 0\) but \(\kappa'' \neq 0\).
 
 \subsection{Arbitrary Speed Curves}
-\label{sec:orgf397367}
+\label{sec:orgbcd4b02}
 If \(\boldsymbol{\alpha}\) is not necessarily unit-speed, then we obtain the tangent:
 
 \begin{align*}
@@ -124,7 +124,7 @@ We also find that \textbf{total curvature} is:
 \end{align*}
 
 \subsection{Simple Closed Curves}
-\label{sec:org708c840}
+\label{sec:orgde20e74}
 We can say a \textbf{simple closed curve} is one that joins up the beginning and end.
 
 \begin{center}
@@ -147,13 +147,13 @@ Then, we find that if we have a simple closed curve with length \(l\) and area \
 \end{align*}
 
 \section{Space Curves}
-\label{sec:orgfeba8f1}
+\label{sec:org98494cf}
 A plane curve is determined by curvature. Space curves are not. A circle on the \(xy-\text{plane}\) and a circular helix have unit curvature everywhere, but can not be transformed to one another. Instead, we measure space curves with curvature and torsion.
 
 If we have a unit-speed space curve \(\gamma\left(s\right)\) in \(\mathbb{R}^{3}\), we can denote the unit tangent vector as \(T = \gamma'\left(s\right)\). We have the real-valued \textbf{curvature function} \(kappa\left(s\right) = \lvert\lvert T'\left(s\right) \lvert\lvert \geq 0\).
 
 \subsection{Principal Normal}
-\label{sec:org4d4924a}
+\label{sec:org2394375}
 The principal normal of a space curve \(\gamma\left( s \right)\) is the vector:
 
 \begin{align*}
@@ -163,7 +163,7 @@ The principal normal of a space curve \(\gamma\left( s \right)\) is the vector:
 Since \(\lvert\lvert T'\left(s\right) \lvert\lvert = \kappa\), \(N\) is a unit vector. Similarly, \(T' \cdot T = 0\) so T and N are orthogonal to each other.
 
 \subsection{Binormal}
-\label{sec:orgbc0e720}
+\label{sec:orga592cd6}
 The \textbf{binormal} is:
 
 \begin{align*}
@@ -173,7 +173,7 @@ The \textbf{binormal} is:
 Then, \(\left\lbrace T\left(s\right), N\left(s\right), B\left(s\right) \right\rbrace\) form an \textbf{orthonormal basis} of \(\mathbb{R}^{3}\) where each is orthogonal to the other two. They form the \textbf{Frenet frame}.
 
 \subsection{Torsion \(\left( \tau \right)\)}
-\label{sec:orgb6352be}
+\label{sec:org504a40a}
 We define the \textbf{torsion} as:
 
 \begin{align*}
@@ -189,7 +189,7 @@ We can see that:
 \(-\tau\) represents the rate of binormal rotation.
 
 \subsection{Frenet Formulas}
-\label{sec:org99b1b0d}
+\label{sec:org7ac3c47}
 Given a unit-speed curve with positive curvature and some torsion,
 
 \begin{center}
@@ -235,7 +235,7 @@ This is true because the Frenet frame is \textbf{independent} of the parametriza
 Intuitively, a unit-speed curve has speed \(v=1\), so the Frenet formulas are as defined earlier.
 
 \subsubsection{Computing the Frenet Apparatus}
-\label{sec:org8679c86}
+\label{sec:orgd1642b0}
 \textbf{Theorem 3} \emph{Let \(\boldsymbol{\alpha}\) be a regular curve in \(\mathbb{R}^{3}\), and \(\boldsymbol{\alpha}' \times \boldsymbol{\alpha}'' \neq 0\). Then,}
 
 \begin{align*}
@@ -247,7 +247,7 @@ N &= B \times T \\
 \end{align*}
 
 \subsection{Approximation}
-\label{sec:org1279f94}
+\label{sec:orgaaa171b}
 Consider the unit-speed curve \(\boldsymbol{\beta} = \left( \beta_{1}, \beta_{2}, \beta_{3} \right)\) near the point \(\boldsymbol{\beta}\left(0\right)\). For a small \(s\), each coordinate \(\beta_{i}\left(s\right)\) is closely approximated by the Taylor series. So,
 
 \begin{align*}
@@ -276,24 +276,24 @@ So, the approximation becomes:
 This is the \textbf{Frenet approximation of \(\boldsymbol{\beta}\) near \(s = 0\)}. We can get an approximation at some \(s_{0}\) by replacing \(0\) with \(s_{0}\) and \(s\) with \(s - s_{0}\).
 
 \subsection{Osculating Plane}
-\label{sec:org440b3d4}
+\label{sec:orgb98fd1e}
 Using the \textbf{Frenet approximation}, we can get the best linear or quadratic approximation of the curve. This approximation lies in the plane through the approximated point orthogonal to the binormal. This is called the \textbf{osculating plane of \(\boldsymbol{\beta}\) near \(s_{0}\)}.
 
 \subsection{Spherical Image}
-\label{sec:org8a39d38}
+\label{sec:orga45566f}
 Given a unit-speed curve \(\boldsymbol{\beta}\), then the curve \(\boldsymbol{\sigma}\left(s\right) = T\left(s\right) = \boldsymbol{\beta}'\left(s\right)\) is called the \textbf{spherical image} of \(\boldsymbol{\beta}\).
 
 \section{Algebraic Curves}
-\label{sec:org5eed223}
+\label{sec:org7d8c464}
 \subsection{Singular Points}
-\label{sec:org66c345c}
+\label{sec:org67b2f55}
 A \textbf{singular point} is at a point where the gradient vanishes. We can not simply solve for \(\nabla f = 0\) though. We have to also find a simultaneous solution for \(f = 0\). These are singularities of the polynomial that lie on the curve.
 \subsection{Local Parametrization}
-\label{sec:org4b4cfc1}
+\label{sec:org6595441}
 Algebraic curves can be parametrized locally near non-singular points. They can be parametrized by \(x\), \(y\) or both. A \textbf{local parametrization} of an algebraic curve near a non-singular point \(\left( a,b \right)\) is a parametrization \(J \rightarrow \mathbb{R}^{2}\) of a piece of the curve including the point \(\left( a,b \right)\).
 
 \subsection{Curvature}
-\label{sec:org9e59fc1}
+\label{sec:org6aad87d}
 In general, algebraic curves cannot be parametrized in a simple way. So, we use a different method of finding the curvature using the \textbf{Hessian matrix} of a polynomial.
 
 \begin{align*}
@@ -307,7 +307,7 @@ Then, the curvature is defined as:
 \end{align*}
 
 \subsection{Inflection Points}
-\label{sec:org72e3655}
+\label{sec:org5b58554}
 Algebraic curves have \textbf{inflection points} at non-singular points \(\left(a,b\right)\) if and only if
 
 \begin{align*}
@@ -324,15 +324,15 @@ So, to find all inflection points, we solve:
 \end{align*}
 
 \section{Surfaces}
-\label{sec:orgbbe3a7d}
+\label{sec:org3ac007a}
 \subsection{Surface Patch}
-\label{sec:orgf9b714c}
+\label{sec:org10b3ca9}
 A \textbf{surface} is viewed as a collection of \textbf{homeomorphisms} \(\boldsymbol{\sigma} : U \rightarrow S \cup W\) called \textbf{surface patches} where \(u\) is a . This collection is called the \textbf{atlas} of the surface. Every point of the surface is in at least one surface patch.
 
 A map is smooth if each component of the map has continuous partial derivatives of all orders. A surface patch is \textbf{regular} if it is smooth and \(\boldsymbol{\sigma}_{u} \times \boldsymbol{\sigma}_{v} \neq 0\) at every point of \(U\). A \textbf{smooth surface} is one whose atlas consists of regular surface patches.
 
 \subsection{Orientable Surface}
-\label{sec:org47d1034}
+\label{sec:orga9029f0}
 We define the \textbf{tangent space} at a point \(\boldsymbol{p}\) of a surface to consist of the tangent vectors of all curves on the surface that pass through \(\boldsymbol{p}\). It is uniquely defined by the \textbf{unit normal} to the surface at the point, which is perpendicular to the tangent space, also known as the \textbf{tangent plane}.
 
 \begin{align*}
@@ -342,7 +342,7 @@ We define the \textbf{tangent space} at a point \(\boldsymbol{p}\) of a surface 
 This is called the \textbf{standard unit normal}. A surface is \textbf{orientable} if there is a canonical choice for the unit normal at every point, obtained by taking the standard unit normal of each surface patch in the atlas.
 
 \subsection{Surface Curves}
-\label{sec:org27c046e}
+\label{sec:org9e3a59c}
 If we have a curve in a surface patch, then we can calculate the arc length as:
 
 \begin{align*}
@@ -361,12 +361,26 @@ The \textbf{Gaussian curvature} and \textbf{mean curvature} of a surface patch r
 \begin{align*}
     K =  \kappa_{1}\kappa_{2} &= \frac{LN - M^{2}}{EG - F^{2}} \\
     H = \frac{1}{2}\left(\kappa_{1} + \kappa_{2}\right) &= \frac{1}{2}\frac{LG - 2MF + NE}{EG-F^{2}}
-\end{align*}
+ \end{align*}
 
 where \(\kappa_{1}\) and \(\kappa_{2}\) are the principal curvatures.
 
+The \textbf{Gauss map} is the mapping from a surface patch to the unit sphere at from \(\boldsymbol{p} = \boldsymbol{\sigma}\left(u,v\right)\) to the point \(\hat{\boldsymbol{n}}\left(u,v\right)\).
+
+The \textbf{total Gaussian curvature} of some surface is:
+
+\begin{align*}
+    \int \int_{S} KdS
+\end{align*}
+
+Which is the integral of the Gaussian curvature \(K\) over \(S\). If the surface is defined over the domain \(\left[a,b\right] \times \left[c,d\right]\), then the total Gaussian curvature is:
+
+\begin{align*}
+    \int_{c}^{d} \int_{a}^{b} K\left(u,v\right)\sqrt{EG-F^{2}}dudv
+\end{align*}
+
 \subsection{First Fundamental Form}
-\label{sec:org64b03bb}
+\label{sec:orge161154}
 \textbf{First fundamental form} of a surface patch represents the principal part of the square of the increment on the surface patch when the parameters \(u\) and \(v\) are increased by \(du\) and \(dv\) respectively.
 
 \begin{center}
@@ -397,7 +411,7 @@ The \textbf{metric tensor} of the surface is:
 The first fundamental form is invariant to parametrization.
 
 \subsection{Second Fundamental Form}
-\label{sec:orgf7ee177}
+\label{sec:orgbc60dba}
 Let the standard unit normal be:
 
 \begin{align*}
@@ -419,7 +433,7 @@ And takes the form:
 \end{align*}
 
 \subsection{Surface Area}
-\label{sec:org5881b1e}
+\label{sec:org4208375}
 The surface area is:
 
 \begin{align*}
@@ -427,7 +441,7 @@ The surface area is:
 \end{align*}
 
 \subsection{Darboux Frame}
-\label{sec:org05ff872}
+\label{sec:org619f911}
 If we look at a unit-speed curve \(\gamma\), then we have a frame called the \textbf{Darboux frame} defined by \(\dot{\boldsymbol{\gamma}}\), \(\hat{\boldsymbol{n}}\), and \(\hat{\boldsymbol{n}} \times \dot{\boldsymbol{\gamma}}\). We let these be \(T\), \(U\), and \(V\) respectively. Then, we have:
 
 \begin{align*}
@@ -441,19 +455,75 @@ If we look at a unit-speed curve \(\gamma\), then we have a frame called the \te
 \end{align*}
 
 \section{Geodesics}
-\label{sec:orge127625}
+\label{sec:org96d3fc5}
+A curve is called a \textbf{geodesic} if the acceleration is either zero or parallel to its unit normal \(\hat{\boldsymbol{n}}\).
+
+\textbf{Proposition 1} \emph{Every line can be reparametrized as a geodesic. Thus, a geodesic \(\boldsymbol{\gamma}\left(t\right)\) on a surface \(S\) has constant speed.}
+
+Thus, unit-speed parametrizations of geodesics are also geodesics.
+
+\textbf{Proposition 2} \emph{A curve on a surface is a geodesic if and only if its geodesic curvature is zero everywhere}
+
+\textbf{Theorem 3} \emph{A curve \(\boldsymbol{\gamma}\) on a surface \(S\) is a geodesic if and only if for any part \(\boldsymbol{\gamma}\left(t\right) = \boldsymbol{\sigma}\left(u\left(t\right),v\left(t\right)\right)\) contained in a surface patch \(\boldsymbol{\sigma}\) of \(S\), the following two equations are satisfied:}
+
+\begin{align*}
+    \frac{d}{dt}\left(E\dot{u} + F\dot{v}\right) = \frac{1}{2}\left(E_{u}\dot{u}^{2} + 2F_{u}\dot{u}\dot{v} + G_{u}\dot{v}^{2}\right) \\
+    \frac{d}{dt}\left(F\dot{u} + G\dot{v}\right) = \frac{1}{2}\left(E_{v}\dot{u}^{2} + 2F_{v}\dot{u}\dot{v} + G_{v}\dot{v}^{2}\right)
+\end{align*}
+
+\emph{where \(Edu^{2} + 2Fdudv + Gdv^{2}\) is the first fundamental form of \(\boldsymbol{\sigma}\).}
+
+These two equations are called the \textbf{geodesic equations}. They are nonlinear and solvable analytically on rare occasions only.
+
+\subsection{Isometry}
+\label{sec:org741e452}
+An \textbf{isometry} is a \textbf{diffeomorphism} that maps curves from one surface to curves of the same length in another surface. A \textbf{diffeomorphism} is a mapping from one surface to another that is smooth, bijective, and has an inverse map that is also smooth. The necessary conditions for \(\boldsymbol{f}\) to be an isometry is any surface patch \(\boldsymbol{\sigma}_{1}\) of \(S_{1}\) and its image patch of \(\boldsymbol{f} \circ \boldsymbol{\sigma}_{1}\) of \(S_{2}\) have the same first fundamental form.
+
+\textbf{Theorem 5} \emph{An isometry maps the geodesics of \(S_{1}\) to the geodesics of \(S_{2}\).}
+
+\subsection{Shortest Paths}
+\label{sec:org23e63d1}
+\textbf{Theorem 6} \emph{Let \(\boldsymbol{\gamma}\) be a shortest path on a surface \(S\) connecting two points \(\boldsymbol{p}\) and \(\boldsymbol{q}\). Then the part of \(\boldsymbol{\gamma}\) contained in any surface patch \(\boldsymbol{\sigma}\) must be a geodesic.}
+
+The converse is not true. Not all geodesics are shortest paths. Additionally, a shortest path may not exist.
+
+\subsection{Geodesic Coordinates}
+\label{sec:orgc2ed0c0}
+We can use geodesics of a surface to construct an atlas for the surface. For any given unit-speed geodesic \(\boldsymbol{\gamma}\left(v\right)\) that passes through a point \(\boldsymbol{p}\) in \(S\) at \(v = 0\), then for any value of \(v\), there exists a unique unit-speed geodesic \(\boldsymbol{\beta}_{v}\left(u\right)\) such that \(\boldsymbol{\beta}_{v}\left(0\right) = \boldsymbol{\gamma}\left(v\right)\) and \(\boldsymbol{\beta}_{v}'\left(0\right) \perp \boldsymbol{\gamma}'\left(v\right)\). We define a patch \(\boldsymbol{\sigma}\left(u,v\right) = \boldsymbol{\beta}_{v}\left(u\right)\) as a \textbf{geodesic patch}, and we call \(u\) and \(v\) \textbf{geodesic coordinates}.
+
 \section{Nonlinear Optimization}
-\label{sec:orgbac4746}
+\label{sec:orga5a468b}
+\subsection{Golden Section Search}
+\label{sec:orgea84fa0}
+\subsection{Gradient and Hessian}
+\label{sec:org8fcf7bb}
+\subsection{Convex Functions}
+\label{sec:org72a699d}
+\subsection{Steepest Descent}
+\label{sec:orgfafea7f}
+\subsection{Line Search}
+\label{sec:orge1f92cc}
+\subsection{Constrained Optimization}
+\label{sec:orgd2307a7}
+\subsection{Lagrange Multipliers}
+\label{sec:org0d6b278}
+
 \section{Data Fitting}
-\label{sec:orgb66e688}
+\label{sec:org09bf7c3}
+\subsection{Basis Functions}
+\label{sec:orgc00e764}
+\subsection{Least-Squares Fitting}
+\label{sec:org0bd9f53}
+\subsection{Normal Equations}
+\label{sec:orgc0ff6db}
 \section{Orthogonal Polynomials}
-\label{sec:org0531927}
+\label{sec:org2f0e1e1}
 \section{Fourier Series}
-\label{sec:org1504115}
+\label{sec:org204beb1}
 \section{Calculus of Variations}
-\label{sec:org3fad9c1}
+\label{sec:orge965076}
 \section{Probability}
-\label{sec:org288edd2}
+\label{sec:org6414b8f}
 Probability of one or more events \(A\) given a set of possible outcomes \(S\) is defined by Laplace as:
 
 \begin{align*}
@@ -469,13 +539,13 @@ We also have conditional probability which is defined as the probability of even
 We call the probability of A the \textbf{a priori} probability. The conditional probability of A given B is called the \textbf{a posteriori} probability.
 
 \subsection{Random Variables}
-\label{sec:orgb355d8a}
+\label{sec:org10c15ef}
 Random variables are functions from the sample space \(S\) of an experiment to the set of real numbers. It simply assigns a real number to each possible outcome.
 
 Random variables can be either \textbf{discrete} or \textbf{continuous}.
 
 \subsection{Cumulative Distribution Function}
-\label{sec:org8d5bb9a}
+\label{sec:org60b2661}
 Given a random variable \(X\), its \textbf{cumulative distribution function (CDF)} is defined as:
 
  \begin{align*}
@@ -490,7 +560,7 @@ If we have a \textbf{discrete} probability \(Pr\left( x \right)\), that is the p
 
 \begin{enumerate}
 \item Properties
-\label{sec:org1e4e472}
+\label{sec:org5141915}
 \begin{align*}
     D\left( x \right) &\in \left[0,1\right] \\
     D\left( -\infty \right) &= 0 \\
@@ -501,7 +571,7 @@ If we have a \textbf{discrete} probability \(Pr\left( x \right)\), that is the p
 \end{enumerate}
 
 \subsection{Probability Density Function}
-\label{sec:org0eae289}
+\label{sec:orge32ba73}
 The \textbf{probability density function (PDF)} \(P\left( x \right)\) of a continuous random variable is defined as the derivative of the cumulative distribution function \(D\left( x \right)\).
 
 \begin{align*}
@@ -511,7 +581,7 @@ The \textbf{probability density function (PDF)} \(P\left( x \right)\) of a conti
 
 \begin{enumerate}
 \item Properties
-\label{sec:org8d6986f}
+\label{sec:org315dedb}
  \begin{align*}
      P\left( x \right) &\geq 0 \\
      \int_{-\infty}^{\infty} P\left( x \right)dx &= 1 \\
@@ -535,7 +605,7 @@ A \textbf{uniform distribution} has constant PDF. The PDF and CDF on the interva
 \end{enumerate}
 
 \subsection{Generating Continuous Distributions}
-\label{sec:orga38223a}
+\label{sec:orgea58189}
 Built-in random functions like C++'s \texttt{rand} generate uniformly distributed pseudo-random numbers. If we want to generate uniform random points for a different distribution, say for a circle of radius \(\rho\), then we can do so using CDF.
 
 \(D\left( x \right)\) increases monotonically from zero to one. If we suppose \(D\left( x \right)\) is continuous and strictly increasing, then there exists an inverse \(D^{-1}\left( y \right)\) such that, for \(0 < y < 1\),
@@ -575,7 +645,7 @@ Clearly, \(D\left( r \right) \in \left[0,1\right]\). So, if we let \(s = D\left(
 Thus, random points should be generated at \(\rho\sqrt{S}\left(\cos\Theta,\sin\Theta\right)\), where \(S\) and \(\Theta\) are random variables with uniform distributions over \(\left[0,1\right]\) and \(\left[0,2\pi\right]\).
 
 \subsection{Mean \(\left( \mu \right)\)}
-\label{sec:orge805c80}
+\label{sec:orgd8a2859}
 The \textbf{mean} or \textbf{expected value}, of a random variable \(X\) is its average value over a large number of experiments (say, \(N\) experiments) with outcomes \(x_{i}\) that occurs \(n_{i}\) times for \(i \in \left\lbrace 1, \ldots, m \right\rbrace\).
 
 \begin{align*}
@@ -598,7 +668,7 @@ If the random variable \(X\) with PDF \(P\left( X \right)\) is continuous, then 
 \end{align*}
 t
 \subsection{Standard Deviation \(\left( \sigma \right)\)}
-\label{sec:org939fd22}
+\label{sec:org6ae4dde}
 The \textbf{variance} measure the dispersion of the values about the mean. We can compute the variance of a discrete random variable with \(N\) possible values \(x_{1}, \ldots, x_{N}\) and mean \(\mu\):
 
 \begin{align*}
@@ -621,7 +691,7 @@ So, we can rewrite variance as:
 \end{align*}
 
 \subsection{Gaussian Distribution}
-\label{sec:orga65459a}
+\label{sec:org3b5f563}
 A random variable \(X\) with mean \(\mu\) and variance \(\sigma^{2}\) has \textbf{Gaussian distribution} or \textbf{normal distribution} if its probability density function is given by:
 
 \begin{align*}
@@ -631,9 +701,9 @@ A random variable \(X\) with mean \(\mu\) and variance \(\sigma^{2}\) has \textb
 We denote the Gaussian distribution as \(N\left( \mu,\sigma^{2} \right)\).
 
 \subsection{Random Variables}
-\label{sec:orgad5166f}
+\label{sec:orgf0a1260}
 \subsection{Covariant (Matrix)}
-\label{sec:org646aa80}
+\label{sec:org5ec7bb7}
 \subsection{Correlation (Matrix)}
-\label{sec:orgf215156}
+\label{sec:org1feb61c}
 \end{document}
