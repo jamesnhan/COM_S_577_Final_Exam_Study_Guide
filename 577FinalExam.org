@@ -432,16 +432,125 @@ These two equations are called the *geodesic equations*. They are nonlinear and 
    We can use geodesics of a surface to construct an atlas for the surface. For any given unit-speed geodesic $\boldsymbol{\gamma}\left(v\right)$ that passes through a point $\boldsymbol{p}$ in $S$ at $v = 0$, then for any value of $v$, there exists a unique unit-speed geodesic $\boldsymbol{\beta}_{v}\left(u\right)$ such that $\boldsymbol{\beta}_{v}\left(0\right) = \boldsymbol{\gamma}\left(v\right)$ and $\boldsymbol{\beta}_{v}'\left(0\right) \perp \boldsymbol{\gamma}'\left(v\right)$. We define a patch $\boldsymbol{\sigma}\left(u,v\right) = \boldsymbol{\beta}_{v}\left(u\right)$ as a *geodesic patch*, and we call $u$ and $v$ *geodesic coordinates*.
 
 * Nonlinear Optimization
-** Golden Section Search
-** Gradient and Hessian
-** Convex Functions
-** Steepest Descent
-** Line Search
-** Constrained Optimization
-** Lagrange Multipliers
+  Given functions that depend on one or more independent variable, we want to maximize the function. In general, finding global extremum is very difficult. The popular approaches are: i) find local extrema starting from widely varying values of the independent variables, and then pick the most extreme of these; ii) perturb a local extremum by taking a finite amplitude step away from it, and then see if your routine can get to a better point, or "always" to the same one.
 
+** Golden Section Search
+   The *golden section search* is similar to bisection for root finding. The basic idea is to bracket a minimum and then shrink the bracket. We can not know if we have bracketed a minimum, but if we settle for a local minimum, then we can just bracket any zero of the derivative.
+
+   \begin{align*}
+       f\left(b\right) < \min \left\lbrace f\left(a\right),f\left(c\right) \right\rbrace
+   \end{align*}
+
+   Now, we choose a point $x$, say, halfway between $a$ and $b$. Then, we if $f\left(x\right) > f\left(b\right)$, then we bracket $\left[x,b,c\right]$. Otherwise, we bracket $\left[a,x,b\right]$. To ensure that the interval $\left[a,c\right]$ shrinks towards a point, we alternate the bracketing tuples.
+
+** Gradient and Hessian
+   The *gradient* is defined as:
+
+   \begin{align*}
+       \nabla f\left(x\right) = \left( \frac{\partial f}{\partial x_{1}}, \ldots, \frac{\partial f}{\partial x_{n}} \right)
+   \end{align*}
+
+   This gives the direction in which the value of $f$ increases the fastest. The *Hessian H* of $f$ is defined as an $n \times n$ matrix:
+
+   \begin{align*}
+       H\left(\boldsymbol{x}\right) =
+       \begin{pmatrix}
+           \frac{\partial^{2}f}{\partial x_{1}^{2}} & \cdots & \frac{\partial^{2}f}{\partial x_{1} \partial x_{n}} \\
+           \vdots & \ddots & \vdots \\
+           \frac{\partial^{2}f}{\partial x_{n} \partial x_{1}} & \cdots & \frac{\partial^{2}f}{\partial x_{n}^{2}}
+       \end{pmatrix}
+   \end{align*}
+
+   If $\boldsymbol{x}^{*}$ is a *relative minimum*, then the following conditions hold:
+
+   \begin{itemize}
+       \item $\nabla f\left(\boldsymbol{x}^{*}\right) = 0$
+       \item $\boldsymbol{d}^{T}H\left(\boldsymbol{x}^{*}\right)\boldsymbol{x}$ for every $\boldsymbol{d} \in \mathbb{R}^{n}$
+   \end{itemize}
+
+   The Hessian at a relative minimum is *symmetric positive semi-definite*, so:
+
+   \begin{align*}
+       \boldsymbol{x}^{T}H\left(\boldsymbol{x}^{*}\right)\boldsymbol{x} \geq 0 \text{ for any } \boldsymbol{x}.
+   \end{align*}
+
+   If $\boldsymbol{x}^{*}$ is a *strict relative minimum*, then the Hessian is *positive definite*, so:
+
+   \begin{align*}
+       \boldsymbol{x}^{T}H\left(\boldsymbol{x}^{*}\right)\boldsymbol{x} > 0 \text{ for any } \boldsymbol{x} \neq 0
+   \end{align*}
+
+** Convex Functions
+   Taylor's theorem shows that every function looks like a quadratic near a strict local minimum. *Convex functions* are functions whose local minima are global minima.
+
+   *Proposition 1* /Let $f \in C^{2}$. Then $f$ is convex over a convex set $\Omega$ containing an interior point if and only if the Hessian matrix $H$ is positive semi-definite in $\Omega$.
+
+   *Theorem 2* /Let $f$ be a convex function defined on a convex set $\Omega$. Then the set $\Gamma$ where $f$ achieves its minimum value is convex. Furthermore, any relative minimum is a global minimum./
+
+** Steepest Descent
+   In one dimension, we apply the rules:
+
+   \begin{align*}
+       \text{if } f'\left(x\right) < 0 &\text{ then move to the right;} \\
+       \text{if } f'\left(x\right) > 0 &\text{ then move to the left;} \\
+       \text{if } f'\left(x\right) = 0 &\text{ then stop.}
+   \end{align*}
+
+   In higher dimensions, we use $-\nabla f$ to point us toward a minimum. This method is called *steepest descent* because we are descending at the steepest rate.
+
+** Jacobian
+   The $Jacobian$ of a function is the derivative of a vector function $\boldsymbol{f}\left(\boldsymbol{x}\right) = \left(f_{1}\left(\boldsymbol{x}\right), \ldots, f_{m}\left(\boldsymbol{x}\right)\right)$ with respect to $\boldsymbol{x}$ which results in an $m \times n$ matrix.
+   
+** Lagrange Multipliers
+   To solve constrained problems, we introduce the *Lagrangian* defined as:
+
+   \begin{align*}
+       \ell\left(x,y,\lambda\right) = f\left(x,y\right) + \lambda h\left(x,y\right)
+   \end{align*}
+
+   Then, we have:
+
+   \begin{align*}
+       \nabla \ell = \begin{pmatrix} \frac{\partial f}{\partial x} + \lambda\frac{\partial h}{\partial x} \\ \frac{\partial f}{\partial y} + \lambda\frac{\partial h}{\partial y} \\ h \end{pmatrix}^{T} = \left(\nabla f + \lambda\nabla h, h\right)
+   \end{align*}
+
+   $\lambda$ is known as the *Lagrangian multiplier*. We set the gradient of the Lagrangian to zero $\left(\nabla \ell = 0\right)$ to yield a system of nonlinear equations. Solving these yields the stationary points $\left(x,y,\lambda\right)$, and thus, the minimum and maximum points.
+
+   *Theorem 3 $\left(First-Order Necessary Conditions\right)$* /Let $\boldsymbol{x}^{*}$ be a local extremum point of $f$ subject to the constraints $\boldsymbol{h}\left(\boldsymbol{x}\right) = \boldsymbol{0}$. Assume further that $\boldsymbol{x}^{*}$ is a regular point of these constraints. Then there is a $\boldsymbol{\lambda} \in \mathbb{R}^{m}$ such that/
+
+   \begin{align*}
+       \nabla f\left(\boldsymbol{x}^{*}\right) + \boldsymbol{\lambda}^{T}\nabla h\left(\boldsymbol{x}^{*}\right) = \boldsymbol{0}
+   \end{align*}
+
+   *Theorem 4 $\left(Second-Order Necessary Conditions\right)$* /Suppose that $\boldsymbol{x}^{*}$ is a local minimum of $f$ subject to $\boldsymbol{h}\left(\boldsymbol{x}\right) = \boldsymbol{0}$ and that $\boldsymbol{x}^{*}$ is a regular point of these constraints. Denote by $F$ the Hessian of $f$ and by $H_{i}$ the Hession of $h_{i}$ for $1 \leq i \leq m$. Then there is a $\boldsymbol{\lambda} \in \mathbb{R}^{m}$ such that/
+
+   \begin{align*}
+       \nabla f\left(\boldsymbol{x}^{*}\right) + \boldsymbol{\lambda}^{T}\nabla h\left(\boldsymbol{x}^{*}\right) = \boldsymbol{0}
+   \end{align*}
+
+   /The matrix/
+
+   \begin{align}
+       L\left(\boldsymbol{x}^{*}\right) = F\left(\boldsymbol{x}^{*}\right) = \sum_{i = 1}^{m}\lambda_{i}H_{i}\left(\boldsymbol{x}^{*}\right)
+   \end{align}
+
+   /is positive semi-definite on the tangent space/ $\left\lbrace \boldsymbol{y} \mid \nabla\boldsymbol{h}\left(\boldsymbol{x}^{*}\right)\boldsymbol{y} = \boldsymbol{0}\right\rbrace$.
+
+   *Theorem 5 $\left(Second-Order Sufficient Conditions\right)$* /Suppose there is a point $\boldsymbol{x}^{*}$ satisfying $\boldsymbol{h}\left(\boldsymbol{x}^{*}\right) = \boldsymbol{0}$, and a $\boldsymbol{\lambda}$ such that/
+
+   \begin{align*}
+       \nabla f\left(\boldsymbol{x}^{*}\right) + \boldsymbol{\lambda}^{T}\nabla\boldsymbol{h}\left(\boldsymbol{x}^{*}\right) = \boldsymbol{0}
+   \end{align*}
+
+   /Suppose also that the matrix $L\left(\boldsymbol{x}^{*}\right)$ defined in $\left(1\right)$ is positive definite on the tangent space. Then $\boldsymbol{x}^{*}$ is a strict local minimum of $f$ subject to $\boldsymbol{h}\left(\boldsymbol{x}\right) = \boldsymbol{0}$/
+   
 * Data Fitting
 ** Basis Functions
+   The *basis functions* are the functions that make up the variable terms of $k$ degree for an algebraic function of the form:
+
+   \begin{align*}
+       \sum_{i = 0}^{n} a_{i}x_{i}^{i}
+   \end{align*}
 ** Least-Squares Fitting
 ** Normal Equations
 * Orthogonal Polynomials
