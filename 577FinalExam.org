@@ -549,10 +549,28 @@ These two equations are called the *geodesic equations*. They are nonlinear and 
    The *basis functions* are the functions that make up the variable terms of $k$ degree for an algebraic function of the form:
 
    \begin{align*}
-       \sum_{i = 0}^{n} a_{i}x_{i}^{i}
+       \sum_{i = 0}^{n} a_{i}b_{i}\left(x\right)
    \end{align*}
+
+   Basis functions are not necessarily, for example, $1, x, x^{2}$. They are any function that spans the vector space.
+
 ** Least-Squares Fitting
-** Normal Equations
+   Using a linear combination of the chosen basis functions, we can achieve an approximation of the original function through several norms to measure the error. Most often, we use the *least-squares fitting* that is defined by the norm:
+
+   \begin{align*}
+       2\text{-norm: } &\lvert\lvert f - F \lvert\lvert_{2} = \sqrt{\sum_{i=1}^{n} \lvert f_{i} - F\left(x_{i}\right)\rvert^{2}}
+   \end{align*}
+
+   To solve for the least-squares fitting, we can use two methods: coefficient matrices or DVD.
+
+   The *coefficient matrix* method is sets $\boldsymbol{\Phi}$ to be the matrix containing the values of the $i$th basis function in the $i$th column of $n$ size where $n$ is the number of points to be related. We then take $\boldsymbol{c} = \left(\boldsymbol{\Phi}^{T}\boldsymbol{\Phi}\right)^{-1}\boldsymbol{\Phi}^{T}\boldsymbol{f}$.
+
+   The *SVD method* solves:
+
+   \begin{align*}
+       \boldsymbol{\Phi}\boldsymbol{c} = \boldsymbol{f}
+   \end{align*}
+
 * Orthogonal Polynomials
 * Fourier Series
 * Calculus of Variations
