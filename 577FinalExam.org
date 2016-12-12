@@ -52,10 +52,7 @@
    When the curvature is positive then the *center of curvature* lies along the direction of the normal $N\left( s \right)$ at a distance $\frac{1}{\kappa}$ from the point $\boldsymbol{\alpha}\left( s \right)$. When the curvature is negative, then the center of curvature lies in the direction of $-N\left( s \right)$ at a distance of $-\frac{1}{\kappa}$. The *radius of curvature* is $\frac{1}{\lvert \kappa \lvert}$. Together, these form the *osculating circle*. This circle approximates the curve locally up to the second order. The *total curvature* over a closed interval $\left[a,b\right]$ measures the rotation of the tangent as $s$ changes from $a$ to $b$.
 
    \begin{align*}
-       \Phi\left(a,b\right) &= \int_{a}^{b} \kappa ds \\
-       &= \int_{a}^{b} \frac{d\phi}{ds}ds \\
-       &= \int_{a}^{b} d\phi \\
-       &= \phi\left(b\right) - \phi\left(a\right)
+       \Phi\left(a,b\right) &= \int_{a}^{b}\kappa\left(t\right)\lvert\lvert\boldsymbol{\alpha}'\left(t\right)\rvert\rvert dt
    \end{align*}
 
 ** Inflection and Vertex
