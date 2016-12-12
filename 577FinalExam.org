@@ -626,7 +626,7 @@ These two equations are called the *geodesic equations*. They are nonlinear and 
    \end{align*}
 
 ** Variational Derivative
-   For some differentiable functional $J\left[y\right}$, we can find an extremum at $y = y^{*}$ only if its variation vanishes:
+   For some differentiable functional $J\left[y\right]$, we can find an extremum at $y = y^{*}$ only if its variation vanishes:
 
    \begin{align*}
        \partial J\left[h\right] = 0
@@ -805,6 +805,17 @@ t
 
    We denote the Gaussian distribution as $N\left( \mu,\sigma^{2} \right)$.
 
-** Random Variables
 ** Covariant (Matrix)
+       Covariance of random variables $X$ and $Y$ with means $\mu_{X}$ and $\mu_{Y}$ respectively is defined as:
+
+       \begin{align*}
+           \text{cov}\left(X,Y\right) &= E\left(\left(X-\mu_{X}\right)\left(Y-\mu_{Y}\right)\right) \\
+           &= E\left(XY\right) - \mu_{X}\mu{Y}
+       \end{align*}
+
 ** Correlation (Matrix)
+   The *correlation coefficient* of two variables is:
+
+   \begin{align*}
+       \text{cor}\left(X,Y\right) &= \frac{\text{cov}\left(X,Y\right)}{\sigma_{X}\sigma_{Y}}
+   \end{align*}
