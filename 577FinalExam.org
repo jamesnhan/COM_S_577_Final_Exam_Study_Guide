@@ -572,8 +572,75 @@ These two equations are called the *geodesic equations*. They are nonlinear and 
    \end{align*}
 
 * Orthogonal Polynomials
+** Inner Product
+   The *inner product* is defined as:
+
+   \begin{align*}
+       \left\langle g,h \right\rangle &= \int_{a}^{b}g\left(x\right)h\left(x\right)w\left(x\right) dx \text{  or} \\
+       \left\langle g,h \right\rangle &= \sum_{i=1}^{n}g\left(x_{i}\right)h\left(x_{i}\right)w\left(x_{i}\right)
+   \end{align*}
+
+   where $w\left(x\right)$ is a positive function, called a *weighting function*. The second form is only used when we do not have information about $g$ and $h$ and all points. Instead, we may have information only at $n$ discrete points $x_{1}, \ldots, x_{n}$.
+
+   Two functions are *orthogonal* if their inner product vanishes.
+
+   Orthogonal functions help with selecting a good basis of functions $\mathcal{B}$ and approximating a given function or a set of observed data using the basis functions using:
+
+   \begin{align*}
+   f \cong \sum_{g\in\mathcal{B}} \frac{\left\langle f,g \right\rangle}{\left\langle g,g \right\rangle}g
+   \end{align*}
+
+** Least-Squares Approximation
+   Given a function $f\left(x\right)$ defined on some interval $\left(a,b\right)$, we want to approximate it by a polynomial $p\left(x\right)$ of degree at most $k$. We measure the difference between $f$ and $p$ by:
+
+   \begin{align*}
+       \left\langle f\left(x\right) - p\left(x\right), f\left(x\right) - p\left(x\right)\right\rangle
+   \end{align*}
+
+   We find an orthogonal sequence of polynomials for the chosen inner product. Then,
+
+   \begin{align*}
+       p\left(x\right) = d_{0}p_{0}\left(x\right) + \ldots + d_{k}p_{k}\left(x\right)
+   \end{align*}
+
+   where
+
+   \begin{align*}
+       d_{i} = \frac{\left\langle f, p_{i} \right\rangle}{\left\langle p_{i}, p_{i} \right\rangle}
+   \end{align*}
+
 * Fourier Series
+  The *Fourier coefficients* of a *Fourier series* are defined as:
+
+  \begin{align*}
+      \hat{f}\left(j\right) &= \left\langle f\left(x\right),e^{ijx} \right\rangle \\
+      &= \frac{1}{2\pi}\int_{0}^{2\pi} f\left(x\right)e^{-ijx}dx
+  \end{align*}
+
 * Calculus of Variations
+** Functional
+   A *functional* assigns a real number to each function in some class. In some sense, it is a function of another function.
+
+   \begin{align*}
+       J\left[y\right] = \int_{a}^{b} F\left(x, y, y'\right)dx
+   \end{align*}
+
+** Variational Derivative
+   For some differentiable functional $J\left[y\right}$, we can find an extremum at $y = y^{*}$ only if its variation vanishes:
+
+   \begin{align*}
+       \partial J\left[h\right] = 0
+   \end{align*}
+
+   for all admissible functions $h$.
+
+** Euler's Equation
+   *Euler's equation* is:
+
+   \begin{align*}
+       F_{y} - \frac{d}{dx}F_{y'} = 0
+   \end{align*}
+
 * Probability
   Probability of one or more events $A$ given a set of possible outcomes $S$ is defined by Laplace as:
 
